@@ -24,6 +24,8 @@ namespace DnD___Campaign_Dashboard_v._1.Models
         public DbSet<Weapons> Weapons { get; set; }
         public DbSet<MagicItems> MagicItems { get; set; }
         public DbSet<AdventuringGear> AdventuringGear { get; set; }
+        public DbSet<Spell> Spells { get; set; }
+        public DbSet<Monster> Monsters { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
