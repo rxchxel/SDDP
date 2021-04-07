@@ -189,6 +189,14 @@
     <Compile Include="Migrations\202104071424064_AddingMagicItemsAndAdveneturingGear.Designer.cs">
       <DependentUpon>202104071424064_AddingMagicItemsAndAdveneturingGear.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104071516303_AddSpellClass.cs" />
+    <Compile Include="Migrations\202104071516303_AddSpellClass.Designer.cs">
+      <DependentUpon>202104071516303_AddSpellClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104071526462_AddMonsterClass.cs" />
+    <Compile Include="Migrations\202104071526462_AddMonsterClass.Designer.cs">
+      <DependentUpon>202104071526462_AddMonsterClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdventuringGear.cs" />
@@ -197,7 +205,9 @@
     <Compile Include="Models\ItemParentClass.cs" />
     <Compile Include="Models\MagicItems.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Monster.cs" />
     <Compile Include="Models\ParentClass.cs" />
+    <Compile Include="Models\Spell.cs" />
     <Compile Include="Models\Weapons.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -289,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104071424064_AddingMagicItemsAndAdveneturingGear.resx">
       <DependentUpon>202104071424064_AddingMagicItemsAndAdveneturingGear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071516303_AddSpellClass.resx">
+      <DependentUpon>202104071516303_AddSpellClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071526462_AddMonsterClass.resx">
+      <DependentUpon>202104071526462_AddMonsterClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
