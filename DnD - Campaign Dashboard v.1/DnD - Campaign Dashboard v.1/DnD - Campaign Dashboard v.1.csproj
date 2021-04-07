@@ -185,11 +185,17 @@
     <Compile Include="Migrations\202104071403125_AddWeaponsTable.Designer.cs">
       <DependentUpon>202104071403125_AddWeaponsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104071424064_AddingMagicItemsAndAdveneturingGear.cs" />
+    <Compile Include="Migrations\202104071424064_AddingMagicItemsAndAdveneturingGear.Designer.cs">
+      <DependentUpon>202104071424064_AddingMagicItemsAndAdveneturingGear.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdventuringGear.cs" />
     <Compile Include="Models\Armour.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ItemParentClass.cs" />
+    <Compile Include="Models\MagicItems.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ParentClass.cs" />
     <Compile Include="Models\Weapons.cs" />
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104071403125_AddWeaponsTable.resx">
       <DependentUpon>202104071403125_AddWeaponsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071424064_AddingMagicItemsAndAdveneturingGear.resx">
+      <DependentUpon>202104071424064_AddingMagicItemsAndAdveneturingGear.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
