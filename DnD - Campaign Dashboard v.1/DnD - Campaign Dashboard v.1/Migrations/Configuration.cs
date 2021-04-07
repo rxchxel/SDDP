@@ -9,8 +9,8 @@ namespace DnD___Campaign_Dashboard_v._1.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "DnD___Campaign_Dashboard_v._1.Models.ApplicationDbContext";
+            AutomaticMigrationsEnabled = false;
+            //ContextKey = "DnD___Campaign_Dashboard_v._1.Models.ApplicationDbContext";
         }
 
         protected override void Seed(DnD___Campaign_Dashboard_v._1.Models.ApplicationDbContext context)

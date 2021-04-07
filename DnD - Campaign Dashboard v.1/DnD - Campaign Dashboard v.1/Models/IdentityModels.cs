@@ -20,6 +20,7 @@ namespace DnD___Campaign_Dashboard_v._1.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Armour> Armours { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

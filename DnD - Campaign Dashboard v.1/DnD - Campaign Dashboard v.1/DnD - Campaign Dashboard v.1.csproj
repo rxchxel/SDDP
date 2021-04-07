@@ -177,8 +177,13 @@
     <Compile Include="Migrations\202103281458450_InitialCreate.Designer.cs">
       <DependentUpon>202103281458450_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104071334218_AddArmour.cs" />
+    <Compile Include="Migrations\202104071334218_AddArmour.Designer.cs">
+      <DependentUpon>202104071334218_AddArmour.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Armour.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ItemParentClass.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -264,6 +269,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103281458450_InitialCreate.resx">
       <DependentUpon>202103281458450_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071334218_AddArmour.resx">
+      <DependentUpon>202104071334218_AddArmour.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
