@@ -181,6 +181,10 @@
     <Compile Include="Migrations\202104071334218_AddArmour.Designer.cs">
       <DependentUpon>202104071334218_AddArmour.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104071403125_AddWeaponsTable.cs" />
+    <Compile Include="Migrations\202104071403125_AddWeaponsTable.Designer.cs">
+      <DependentUpon>202104071403125_AddWeaponsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Armour.cs" />
@@ -188,6 +192,7 @@
     <Compile Include="Models\ItemParentClass.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ParentClass.cs" />
+    <Compile Include="Models\Weapons.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -272,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104071334218_AddArmour.resx">
       <DependentUpon>202104071334218_AddArmour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104071403125_AddWeaponsTable.resx">
+      <DependentUpon>202104071403125_AddWeaponsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
