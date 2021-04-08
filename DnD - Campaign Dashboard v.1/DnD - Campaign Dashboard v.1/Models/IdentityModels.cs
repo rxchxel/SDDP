@@ -21,11 +21,14 @@ namespace DnD___Campaign_Dashboard_v._1.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Armour> Armours { get; set; }
-        public DbSet<Weapons> Weapons { get; set; }
-        public DbSet<MagicItems> MagicItems { get; set; }
+        public DbSet<Weapon> Weapons { get; set; }
+        public DbSet<MagicItem> MagicItems { get; set; }
         public DbSet<AdventuringGear> AdventuringGear { get; set; }
         public DbSet<Spell> Spells { get; set; }
         public DbSet<Monster> Monsters { get; set; }
+        public DbSet<Encounter> Encounters { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+        public DbSet<Character> Characters { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
