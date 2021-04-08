@@ -29,6 +29,7 @@ namespace DnD___Campaign_Dashboard_v._1.Models
         public DbSet<Encounter> Encounters { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Character> Characters { get; set; }
+        public DbSet<Campaign> Campaigns { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
