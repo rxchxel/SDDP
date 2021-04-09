@@ -53,8 +53,10 @@
 <head>
     <meta charset="UTF-8">
     @*<title>Side Navigation Bar</title>*@
-    @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/styles.css")
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Site.css")
+
     @*<link rel="stylesheet" href="~/Content/styles.css">*@
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
@@ -62,20 +64,20 @@
 
     <div class="wrapper">
         <div class="sidebar">
+ 
             <ul>
                 <li><a href='@Url.Action("Index", "Home", "Landing Page")' target="_self"><img src="~/Images/Icon awesome-dice-d20.png" /></a></li>
+                @if (Request.IsAuthenticated)
+                {
+                    <li>@Html.ActionLink("Character Sheets", "Index", "Character Sheets")</li>
+                    <li>@Html.ActionLink("Dice Roller", "Index", "Dice Roller")</li>
+                    <li>@Html.ActionLink("Monsters", "Index", "Monsters")</li>
+                    <li>@Html.ActionLink("Spells", "Index", "Spells")</li>
+                    <li>@Html.ActionLink("Items", "Index", "Items")</li>
+                    <li>@Html.ActionLink("Encounters", "Index", "Encounters")</li>
+                }
             </ul>
-            @if (Request.IsAuthenticated)
-            {
-                <ul>
-                        <li>@Html.ActionLink("Character Sheets", "Index", "Character Sheets")</li>
-                        <li>@Html.ActionLink("Dice Roller", "Index", "Dice Roller")</li>
-                        <li>@Html.ActionLink("Monsters", "Index", "Monsters")</li>
-                        <li>@Html.ActionLink("Spells", "Index", "Spells")</li>
-                        <li>@Html.ActionLink("Items", "Index", "Items")</li>
-                        <li>@Html.ActionLink("Encounters", "Index", "Encounters")</li>
-                </ul>
-            }
+            
         <strong>@Html.Partial("_LoginPartial")</strong>
 
             <div class="social_media">
