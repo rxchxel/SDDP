@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DnD___Campaign_Dashboard_v._1.Models.Weapon>
+@{ ViewBag.Title = "Weapons";}
+
+<h1>Weapons Table</h1>
+
+<div class="col-lg-10">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Damage</th>
+                <th>Damage Type</th>
+                <th>Weapon Category</th>
+                <th>Weapon Range</th>
+                <th>Cost</th>
+                <th>Weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var weapon in Model)
+            {
+                <tr>
+                    <td>
+                        @weapon.Name
+                    </td>
+                    <td>
+                        @weapon.Damage
+                    </td>
+                    <td>
+                        @weapon.DamageType
+                    </td>
+                    <td>
+                        @weapon.WeaponCategory
+                    </td>
+                    <td>
+                        @weapon.WeaponRange
+                    </td>
+                    <td>
+                        @weapon.Cost
+                    </td>
+                    <td>
+                        @weapon.weight lbs
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
