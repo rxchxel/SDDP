@@ -19,10 +19,10 @@ namespace DnD___Campaign_Dashboard_v._1.Models
         public byte Intelligence { get; set; }
         public byte Wisdom { get; set; }
         public byte Charisma { get; set; }
-        public List<Skill> Skills { get; set; }
-        public List<Armour> Armours { get; set; }
-        public List<Weapon> Weapons { get; set; }
-        public List<MagicItem> MagicItems { get; set; }
-        public List<AdventuringGear> AdventuringGears { get; set; }
+        public virtual ICollection<Skill> Skills { get; set; }
+        public virtual ICollection<Armour> Armours { get; set; }
+        public virtual ICollection<Weapon> Weapons { get; set; }
+        public virtual ICollection<MagicItem> MagicItems { get; set; }
+        public virtual ICollection<AdventuringGear> AdventuringGears { get; set; }
     }
 }
