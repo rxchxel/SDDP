@@ -1,3 +1,5 @@
+using Autofac;
+using Autofac.Integration.Mvc;
 using AutoMapper;
 using DnD___Campaign_Dashboard_v._1.DTOs;
 using DnD___Campaign_Dashboard_v._1.Models;
@@ -9,6 +11,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using DnD___Campaign_Dashboard_v._1.App_Start;
 
 namespace DnD___Campaign_Dashboard_v._1
 {
@@ -21,10 +24,21 @@ namespace DnD___Campaign_Dashboard_v._1
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            
-            //var config = new MapperConfiguration(cfg => cfg.CreateMap<Spell, SpellDTO>());
-            //IMapper mapper = new Mapper(config);
-            
+
+            var builder = new ContainerBuilder();
+
+            // Register your MVC controllers. (MvcApplication is the name of
+            // the class in Global.asax.)
+            builder.RegisterControllers(typeof(MvcApplication).Assembly);
+
+            //Register AutoMapper here using AutoFacModule class (Both methods works)
+            //builder.RegisterModule(new AutoMapperModule());
+            builder.RegisterModule<AutoFacModule>();
+
+            // Set the dependency resolver to be Autofac.
+            var container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
         }
     }
 }

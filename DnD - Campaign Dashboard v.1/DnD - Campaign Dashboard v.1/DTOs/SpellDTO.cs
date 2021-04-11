@@ -6,8 +6,9 @@ using System.Web;
 
 namespace DnD___Campaign_Dashboard_v._1.DTOs
 {
-    public class SpellDTO : ParentClass
+    public class SpellDTO
     {
+        public string Name { get; set; }
         public int Level { get; set; }
         public int CastingTime { get; set; }
         public bool Ritual { get; set; }
