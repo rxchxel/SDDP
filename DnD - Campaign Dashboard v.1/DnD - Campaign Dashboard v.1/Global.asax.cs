@@ -1,3 +1,6 @@
+using AutoMapper;
+using DnD___Campaign_Dashboard_v._1.DTOs;
+using DnD___Campaign_Dashboard_v._1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +16,15 @@ namespace DnD___Campaign_Dashboard_v._1
     {
         protected void Application_Start()
         {
+            GlobalConfiguration.Configure(WebApiConfig.Register);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            GlobalConfiguration.Configure(WebApiConfig.Register);
+            
+            //var config = new MapperConfiguration(cfg => cfg.CreateMap<Spell, SpellDTO>());
+            //IMapper mapper = new Mapper(config);
+            
         }
     }
 }
