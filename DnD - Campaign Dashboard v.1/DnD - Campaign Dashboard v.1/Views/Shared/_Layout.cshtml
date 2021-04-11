@@ -20,17 +20,17 @@
             @if (Request.IsAuthenticated)
             {
                 <ul>
-                        <li>@Html.ActionLink("Character Sheets", "Index", "Character Sheets")</li>
-                        <li>@Html.ActionLink("Dice Roller", "Index", "Dice Roller")</li>
-                        <li>@Html.ActionLink("Monsters", "Index", "Monsters")</li>
-                        <li>@Html.ActionLink("Spells", "Index", "Spells")</li>
-                        <li>@Html.ActionLink("Magic Items", "Index", "Items")</li>
-                        <li>@Html.ActionLink("Weapons", "Index", "Weapons")</li>
-                        <li>@Html.ActionLink("Armour", "Index", "Armour")</li>
-                        <li>@Html.ActionLink("Adventuring Gear", "Index", "Adventuring Gear")</li>
+                    <li>@Html.ActionLink("Character Sheets", "Index", "Character Sheets")</li>
+                    <li>@Html.ActionLink("Dice Roller", "Index", "Dice Roller")</li>
+                    <li>@Html.ActionLink("Monsters", "Index", "Monsters")</li>
+                    <li>@Html.ActionLink("Spells", "Index", "Spells")</li>
+                    <li>@Html.ActionLink("Magic Items", "Index", "Items")</li>
+                    <li>@Html.ActionLink("Weapons", "Index", "Weapons")</li>
+                    <li>@Html.ActionLink("Armour", "Index", "Armour")</li>
+                    <li>@Html.ActionLink("Adventuring Gear", "Index", "Adventuring Gear")</li>
                 </ul>
             }
-        <strong>@Html.Partial("_LoginPartial")</strong>
+            <strong>@Html.Partial("_LoginPartial")</strong>
 
             <div class="social_media">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -46,12 +46,15 @@
         @RenderSection("scripts", required: false)
 
 
-        <div class="main_content">
-            @RenderBody()
+    <div class="main_content">
+        @RenderBody()
+        <div class="navbar-fixed-bottom" style="padding-left: 210px">
             <footer>
                 <p>&copy; @DateTime.Now.Year - DND Mangaement Systems</p>
             </footer>
         </div>
+    </div>
+
     </div>
 </body>
 </html>
