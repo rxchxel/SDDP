@@ -58,11 +58,11 @@ namespace DnD___Campaign_Dashboard_v._1
                appId: "734660790565517",
                appSecret: "59c5a5b58834fc3fbf95d4058f79f5ee");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "364557005882-dhi5mklm7pl26o06gseu52o7pgs6dpfj.apps.googleusercontent.com",
+                ClientSecret = "qthzYasqYBc21nH_a5XiF3hY"
+            });
         }
     }
 }

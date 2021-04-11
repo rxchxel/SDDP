@@ -11,15 +11,29 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using DnD___Campaign_Dashboard_v._1.Models;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 
 namespace DnD___Campaign_Dashboard_v._1
 {
     public class EmailService : IIdentityMessageService
     {
-        public Task SendAsync(IdentityMessage message)
+        public async Task SendAsync(IdentityMessage message)
         {
+            string key = @"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";
+            var client = new SendGridClient(key);
+            var from = new EmailAddress("constantinos.n.12@gmail.com", "Constantinos Nicolaou");
+
+            var subject = message.Subject;
+            var to = new EmailAddress(message.Destination, "New User");
+            var plainTextContent = message.Body;
+            var htmlContent = message.Body;
+
+            var email = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+
+            await client.SendEmailAsync(email);
             // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            //return Task.FromResult(0);
         }
     }
 
