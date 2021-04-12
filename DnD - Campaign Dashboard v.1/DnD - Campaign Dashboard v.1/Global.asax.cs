@@ -27,17 +27,17 @@ namespace DnD___Campaign_Dashboard_v._1
 
             var builder = new ContainerBuilder();
 
-            // Register your MVC controllers. (MvcApplication is the name of
-            // the class in Global.asax.)
-            builder.RegisterControllers(typeof(MvcApplication).Assembly);
+            //// Register your MVC controllers. (MvcApplication is the name of
+            //// the class in Global.asax.)
+            //builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
-            //Register AutoMapper here using AutoFacModule class (Both methods works)
-            //builder.RegisterModule(new AutoMapperModule());
-            builder.RegisterModule<AutoFacModule>();
+            ////Register AutoMapper here using AutoFacModule class (Both methods works)
+            ////builder.RegisterModule(new AutoMapperModule());
+            //builder.RegisterModule<AutoFacModule>();
 
-            // Set the dependency resolver to be Autofac.
-            var container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            //// Set the dependency resolver to be Autofac.
+            //var container = builder.Build();
+            //DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
         }
     }

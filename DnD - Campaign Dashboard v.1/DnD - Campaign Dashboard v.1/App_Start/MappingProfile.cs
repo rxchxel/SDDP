@@ -17,4 +17,15 @@ namespace DnD___Campaign_Dashboard_v._1.App_Start
             CreateMap<SpellDTO, Spell>();
         }
     }
+    public class MappingConfig
+    {
+        public MapperConfiguration Configure()
+        {
+            var config = new MapperConfiguration(cfg =>
+           {
+               cfg.AddProfile<MappingProfile>();
+           });
+            return config;
+        }
+    }
 }
