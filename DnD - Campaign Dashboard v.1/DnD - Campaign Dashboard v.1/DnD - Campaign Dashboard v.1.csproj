@@ -196,6 +196,7 @@
   <ItemGroup>
     <Compile Include="App_Start\AutoFacModule.cs" />
     <Compile Include="App_Start\MappingProfile.cs" />
+    <Compile Include="Controllers\AdventuringGearController.cs" />
     <Compile Include="Controllers\API\SpellsController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -204,12 +205,15 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArmourController.cs" />
     <Compile Include="Controllers\CharacterSheetController.cs" />
     <Compile Include="Controllers\DiceRollerController.cs" />
     <Compile Include="Controllers\EncounterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MonstersController.cs" />
+    <Compile Include="Controllers\SpellsController.cs" />
     <Compile Include="Controllers\WeaponsController.cs" />
     <Compile Include="DTOs\SpellDTO.cs" />
     <Compile Include="Global.asax.cs">
@@ -333,6 +337,10 @@
     <Content Include="Views\Encounter\Index.cshtml" />
     <Content Include="Views\Monsters\Index.cshtml" />
     <Content Include="Views\CharacterSheet\Index.cshtml" />
+    <Content Include="Views\AdventuringGear\Index.cshtml" />
+    <Content Include="Views\Armour\Index.cshtml" />
+    <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\Spells\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

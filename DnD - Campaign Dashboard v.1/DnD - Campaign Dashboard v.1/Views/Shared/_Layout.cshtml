@@ -20,14 +20,14 @@
             @if (Request.IsAuthenticated)
             {
                 <ul>
-                    <li>@Html.ActionLink("Character Sheet", "Index", "Character Sheet")</li>
-                    <li>@Html.ActionLink("Dice Roller", "Index", "Dice Roller")</li>
+                    <li>@Html.ActionLink("Character Sheet", "Index", "CharacterSheet")</li>
+                    <li>@Html.ActionLink("Dice Roller", "Index", "DiceRoller")</li>
                     <li>@Html.ActionLink("Monsters", "Index", "Monsters")</li>
                     <li>@Html.ActionLink("Spells", "Index", "Spells")</li>
                     <li>@Html.ActionLink("Magic Items", "Index", "Items")</li>
                     <li>@Html.ActionLink("Weapons", "Index", "Weapons")</li>
                     <li>@Html.ActionLink("Armour", "Index", "Armour")</li>
-                    <li>@Html.ActionLink("Adventuring Gear", "Index", "Adventuring Gear")</li>
+                    <li>@Html.ActionLink("Adventuring Gear", "Index", "AdventuringGear")</li>
                 </ul>
             }
             <strong>@Html.Partial("_LoginPartial")</strong>
