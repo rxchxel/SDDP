@@ -328,10 +328,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Weapons\Index.cshtml" />
+    <Content Include="Views\DiceRoller\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\DiceRoller\" />
     <Folder Include="Views\Encounter\" />
     <Folder Include="Views\Monster\" />
   </ItemGroup>
