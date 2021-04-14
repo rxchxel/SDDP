@@ -204,6 +204,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CharacterSheetController.cs" />
     <Compile Include="Controllers\DiceRollerController.cs" />
     <Compile Include="Controllers\EncounterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -331,6 +332,7 @@
     <Content Include="Views\DiceRoller\Index.cshtml" />
     <Content Include="Views\Encounter\Index.cshtml" />
     <Content Include="Views\Monsters\Index.cshtml" />
+    <Content Include="Views\CharacterSheet\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
