@@ -205,8 +205,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DiceRollerController.cs" />
+    <Compile Include="Controllers\EncounterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MonsterController.cs" />
     <Compile Include="Controllers\WeaponsController.cs" />
     <Compile Include="DTOs\SpellDTO.cs" />
     <Compile Include="Global.asax.cs">
@@ -330,6 +332,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\DiceRoller\" />
+    <Folder Include="Views\Encounter\" />
+    <Folder Include="Views\Monster\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
