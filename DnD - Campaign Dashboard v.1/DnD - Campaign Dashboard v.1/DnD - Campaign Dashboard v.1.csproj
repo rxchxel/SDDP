@@ -332,10 +332,10 @@
     <Content Include="Views\DiceRoller\Index.cshtml" />
     <Content Include="Views\Encounter\Index.cshtml" />
     <Content Include="Views\Monsters\Index.cshtml" />
+    <Content Include="Views\CharacterSheet\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\CharacterSheet\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
