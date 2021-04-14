@@ -208,7 +208,7 @@
     <Compile Include="Controllers\EncounterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\MonsterController.cs" />
+    <Compile Include="Controllers\MonstersController.cs" />
     <Compile Include="Controllers\WeaponsController.cs" />
     <Compile Include="DTOs\SpellDTO.cs" />
     <Compile Include="Global.asax.cs">
@@ -329,11 +329,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Weapons\Index.cshtml" />
     <Content Include="Views\DiceRoller\Index.cshtml" />
+    <Content Include="Views\Encounter\Index.cshtml" />
+    <Content Include="Views\Monsters\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Encounter\" />
-    <Folder Include="Views\Monster\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
