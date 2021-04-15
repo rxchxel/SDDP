@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnD___Campaign_Dashboard_v._1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,17 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
 {
     public class ItemsController : Controller
     {
-        // GET: Items
+        private ApplicationDbContext _context;
+        public ItemsController()
+        {
+            _context = new ApplicationDbContext();
+        }
+        // GET: Weapons
+        [Authorize]
         public ActionResult Index()
         {
-            return View();
+            var items = _context.MagicItems.ToList();
+            return View(items);
         }
     }
 }
