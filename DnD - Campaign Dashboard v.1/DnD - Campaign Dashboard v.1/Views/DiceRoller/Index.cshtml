@@ -2,4 +2,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>hello world</h1>
+<link rel="stylesheet" href="~/Views/DiceRoller/dice.css"/>
+
+<p id="result"></p>
+
+<form>
+    <input type="button" value="Throw dice!" onClick="percentRoll(10)">
+    <script>document.getElementById("result").innerHTML = percentRoll(10) </script>
+</form>
+
+<script>
+
+    function percentRoll(max) {
+        var diceValue = Math.floor(Math.random() * max) * 10;
+        return diceValue
+    }
+
+    function diceRoll(max) {
+        return 1 + Math.floor(Math.random() * max)
+    }
+
+</script>
