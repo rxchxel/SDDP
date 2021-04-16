@@ -1,5 +1,48 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@{ ViewBag.Title = "Spells";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h2>Spells</h2>
+<table id="spells" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Spell</th>
+            <th>Casting Time</th>
+            <th>Damage Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#spells").DataTable({
+                ajax: {
+                    url: "/api/spells",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        //render: function (data, type, customer) {
+                        //    return "<a href='/customers/edit/" + customer.id + "'>" + customer.name + "</a>";
+                        //}
+                    },
+                    {
+                        data: "castingTime"
+                    },
+                    {
+                        data: "level",
+                        //render: function (data) {
+                        //    return "<button class='btn-link js-delete' data-customer-id=" + data + ">Delete</button>";
+                        //}
+                    }
+                ]
+            });
+        });
+    </script>
 }
-
-
