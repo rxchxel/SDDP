@@ -1,5 +1,44 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@{ ViewBag.Title = "Monsters";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<h1>hello world</h1>
+<h2>Monsters</h2>
+<table id="monsters" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Monster</th>
+            <th>Alignment</th>
+            <th>Type</th>
+            <th>Size</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+
+@section scripts
+{
+    <script>
+$(document).ready(function () {
+            var table = $("#monsters").DataTable({
+                ajax: {
+                    url: "/api/monsters",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                    },
+                    {
+                        data: "alignment"
+                    },
+                    {
+                        data: "type",
+                    },
+                    {
+                        data: "size",
+                    }
+                ]
+            });
+        });</script>
+}

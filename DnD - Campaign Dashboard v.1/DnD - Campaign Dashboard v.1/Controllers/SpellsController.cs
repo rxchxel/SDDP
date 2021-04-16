@@ -9,6 +9,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
     public class SpellsController : Controller
     {
         // GET: Spells
+        [Authorize]
         public ActionResult Index()
         {
             return View();

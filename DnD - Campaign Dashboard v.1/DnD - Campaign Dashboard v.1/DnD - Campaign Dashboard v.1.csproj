@@ -197,6 +197,7 @@
     <Compile Include="App_Start\AutoFacModule.cs" />
     <Compile Include="App_Start\MappingProfile.cs" />
     <Compile Include="Controllers\AdventuringGearController.cs" />
+    <Compile Include="Controllers\API\MonstersController.cs" />
     <Compile Include="Controllers\API\SpellsController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -216,6 +217,7 @@
     <Compile Include="Controllers\MonstersController.cs" />
     <Compile Include="Controllers\SpellsController.cs" />
     <Compile Include="Controllers\WeaponsController.cs" />
+    <Compile Include="DTOs\MonsterDTO.cs" />
     <Compile Include="DTOs\SpellDTO.cs" />
     <Compile Include="DTOs\WeaponDTO.cs" />
     <Compile Include="Global.asax.cs">
