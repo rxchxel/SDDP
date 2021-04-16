@@ -1,9 +1,8 @@
-﻿@model IEnumerable<DnD___Campaign_Dashboard_v._1.Models.Weapon>
-@{ ViewBag.Title = "Weapons";}
-
+﻿<!--@model IEnumerable<DnD___Campaign_Dashboard_v._1.Models.Weapon>
+@{ ViewBag.Title = "Weapons";}-->
 @*For the moment this page just uses a simple query table to display the data to screen, more for testing purposes*@
 
-<h1>Weapons Table</h1>
+<!--<h1>Weapons Table</h1>
 
 <div class="col-lg-10">
     <table class="table table-bordered table-hover">
@@ -47,4 +46,45 @@
             }
         </tbody>
     </table>
-</div>
+</div>-->
+
+@{ ViewBag.Title = "Weapons";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h2>Weapons</h2>
+<table id="weapons" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Weapons</th>
+            <th>Damage</th>
+            <th>Weapons Category</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+
+@section scripts
+{
+    <script>$(document).ready(function () {
+            var table = $("#weapons").DataTable({
+                ajax: {
+                    url: "/api/weapons",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                    },
+                    {
+                        data: "damageType"
+                    },
+                    {
+                        data: "weaponCategory",
+                    }
+                ]
+            });
+        });</script>
+}

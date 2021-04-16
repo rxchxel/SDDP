@@ -15,6 +15,10 @@ namespace DnD___Campaign_Dashboard_v._1.App_Start
             CreateMap<Spell, SpellDTO>();
 
             CreateMap<SpellDTO, Spell>();
+
+            CreateMap<Weapon, WeaponDTO>();
+
+            CreateMap<WeaponDTO, Weapon>();
         }
     }
     public class MappingConfig
