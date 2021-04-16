@@ -197,6 +197,7 @@
     <Compile Include="App_Start\AutoFacModule.cs" />
     <Compile Include="App_Start\MappingProfile.cs" />
     <Compile Include="Controllers\AdventuringGearController.cs" />
+    <Compile Include="Controllers\API\MonstersController.cs" />
     <Compile Include="Controllers\API\SpellsController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -205,6 +206,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\API\WeaponsController.cs" />
     <Compile Include="Controllers\ArmourController.cs" />
     <Compile Include="Controllers\CharacterSheetController.cs" />
     <Compile Include="Controllers\DiceRollerController.cs" />
@@ -215,7 +217,9 @@
     <Compile Include="Controllers\MonstersController.cs" />
     <Compile Include="Controllers\SpellsController.cs" />
     <Compile Include="Controllers\WeaponsController.cs" />
+    <Compile Include="DTOs\MonsterDTO.cs" />
     <Compile Include="DTOs\SpellDTO.cs" />
+    <Compile Include="DTOs\WeaponDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
