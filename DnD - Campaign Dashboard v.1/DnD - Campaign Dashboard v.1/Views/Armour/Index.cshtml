@@ -1,5 +1,42 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿
+@{ ViewBag.Title = "Armours";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h2>Armours</h2>
+<table id="armours" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Armours</th>
+            <th>Armour Class</th>
+            <th>Armours Category</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#armours").DataTable({
+                ajax: {
+                    url: "/api/armoursapi",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                    },
+                    {
+                        data: "armourClass"
+                    },
+                    {
+                        data: "armourCategory",
+                    }
+                ]
+            });
+        });
+    </script>
 }
-
-
