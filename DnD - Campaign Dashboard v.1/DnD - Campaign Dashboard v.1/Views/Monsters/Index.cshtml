@@ -9,6 +9,7 @@
             <th>Alignment</th>
             <th>Type</th>
             <th>Size</th>
+            <th>Challenge</th>
         </tr>
     </thead>
     <tbody>
@@ -22,7 +23,7 @@
 $(document).ready(function () {
             var table = $("#monsters").DataTable({
                 ajax: {
-                    url: "/api/monsters",
+                    url: "/api/monstersapi",
                     dataSrc: ""
                 },
                 columns: [
@@ -37,6 +38,10 @@ $(document).ready(function () {
                     },
                     {
                         data: "size",
+                    }
+                    ,
+                    {
+                        data: "challenge",
                     }
                 ]
             });
