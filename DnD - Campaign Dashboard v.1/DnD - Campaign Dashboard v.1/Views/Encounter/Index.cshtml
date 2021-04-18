@@ -2,4 +2,33 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>hello world</h1>
+<body>
+            <div class="container">
+                <h1>Encounter Initiative Tracker</h1>
+            </div>
+            <table id="encounter-combatant-list" cellspacing="0">
+                <thead>
+                    <tr id="encounter-combatant-list-titles">
+                        <th>Initiative</th>
+                        <th>Name></th>
+                        <th>HP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="add-new-encounter-combatant">
+                        <td class="encounter-combatant-initiative">
+                            <input type="number" />
+                        </td>
+                        <td class="encounter-combatant-name">
+                            <input type="text" />
+                        </td>
+                        <td class="encounter-combatant-hp">
+                            <input type="number" />
+                        </td>
+                        <td class="encounter-combatant-add">
+                            <button id="add-combatant-button"><i class="button"></i> Add</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+</body>
