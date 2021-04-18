@@ -23,6 +23,19 @@ namespace DnD___Campaign_Dashboard_v._1.App_Start
             CreateMap<Monster, MonsterDTO>();
 
             CreateMap<MonsterDTO, Monster>();
+
+            CreateMap<Armour, ArmourDTO>();
+
+            CreateMap<ArmourDTO, Armour>();
+
+            CreateMap<AdventuringGear, AdventuringGearDTO>();
+
+            CreateMap<AdventuringGearDTO, AdventuringGear>();
+
+            CreateMap<MagicItem, MagicItemDTO>();
+
+            CreateMap<MagicItemDTO, MagicItem>();
+
         }
     }
     public class MappingConfig

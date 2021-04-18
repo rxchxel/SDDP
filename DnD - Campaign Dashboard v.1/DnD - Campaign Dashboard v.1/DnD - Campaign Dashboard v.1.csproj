@@ -197,7 +197,9 @@
     <Compile Include="App_Start\AutoFacModule.cs" />
     <Compile Include="App_Start\MappingProfile.cs" />
     <Compile Include="Controllers\AdventuringGearController.cs" />
+    <Compile Include="Controllers\API\AdventuringGearsAPIController.cs" />
     <Compile Include="Controllers\API\ArmoursAPIController.cs" />
+    <Compile Include="Controllers\API\MagicItemsAPIController.cs" />
     <Compile Include="Controllers\API\MonstersAPIController.cs" />
     <Compile Include="Controllers\API\SpellsAPIController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -218,7 +220,9 @@
     <Compile Include="Controllers\MonstersController.cs" />
     <Compile Include="Controllers\SpellsController.cs" />
     <Compile Include="Controllers\WeaponsController.cs" />
+    <Compile Include="DTOs\AdventuringGearDTO.cs" />
     <Compile Include="DTOs\ArmourDTO.cs" />
+    <Compile Include="DTOs\MagicItemDTO.cs" />
     <Compile Include="DTOs\MonsterDTO.cs" />
     <Compile Include="DTOs\SpellDTO.cs" />
     <Compile Include="DTOs\WeaponDTO.cs" />
@@ -540,7 +544,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Views\DiceRoller\dice.js" />
     <Content Include="Views\DiceRoller\dice.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
