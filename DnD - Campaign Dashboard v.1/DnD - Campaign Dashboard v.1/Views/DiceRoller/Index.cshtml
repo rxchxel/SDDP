@@ -1,25 +1,146 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<head>
+    <style>
+        * {
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+        }
 
-<link rel="stylesheet" href="~/Views/DiceRoller/dice.css"/>
+        div.dice-bag {
+            display: flex;
+            margin: 2em;
+            flex-wrap: wrap;
+        }
 
-<p id="result"></p>
+        div.dice-container {
+            border: solid 1px #a40d0d;
+            border-radius: 10px;
+            margin: .75em;
+            min-width: 12em;
+            width: 10%;
+            padding: 1em;
+        }
 
-<form>
-    <input type="button" value="Throw dice!" onClick="percentRoll(10)">
-    <script>document.getElementById("result").innerHTML = percentRoll(10) </script>
-</form>
+        button {
+            background-color: #a40d0d;
+            border-radius: 6px;
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
 
-<script>
+        .display {
+            margin: 50px auto;
+            border: 1px solid gray;
+            border-radius: 10px;
+            font-size: 80px;
+        }
+    </style>
+</head>
 
-    function percentRoll(max) {
-        var diceValue = Math.floor(Math.random() * max) * 10;
-        return diceValue
-    }
+<div class="dice-bag">
 
-    function diceRoll(max) {
-        return 1 + Math.floor(Math.random() * max)
-    }
+    @for (int i = 0; i < 7; i += 1) {
 
-</script>
+        <div class="dice-container">
+
+            <div class="dice-name">
+                <h2></h2>
+            </div>
+
+            <div class="total-dice-container">
+                <p class="display">1</p>
+            </div>
+
+            <div class="button-container">
+                <button class="add-button">+</button>
+                <button class="remove-button">-</button>
+            </div>
+
+            <div class="result-container">
+                <p class="display"> &nbsp; </p>
+            </div>
+
+            <div class="button-container">
+                <button class="roll-button">Roll Dice</button>
+            </div>
+
+        </div>
+        
+     }
+
+
+</div>
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            function percentRoll(max) {
+                return `${Math.floor(Math.random() * max)}0`
+            }
+
+            function diceRoll(max) {
+                return 1 + Math.floor(Math.random() * max)
+            }
+
+            const d4 = () => diceRoll(4);
+            const d6 = () => diceRoll(6);
+            const d8 = () => diceRoll(8);
+            const d10 = () => diceRoll(10);
+            const d12 = () => diceRoll(12);
+            const d20 = () => diceRoll(20);
+            const d100 = () => percentRoll(10);
+
+            const diceNames = ["d4", "d6", "d8", "d10", "d12", "d20", "percentile"];
+
+            const diceRollers = [d4, d6, d8, d10, d12, d20, d100];
+
+            const diceCounts = [1, 1, 1, 1, 1, 1, 1]
+
+            const diceContainers = document.querySelectorAll("div.dice-container")
+
+            const setDisplayElementValue = (displayElement, number) => {
+                displayElement.innerHTML = number;
+            }
+
+            diceContainers.forEach((currentDiceContainer, idx) => {
+                console.log(currentDiceContainer)
+
+                var diceName = currentDiceContainer.querySelector("div.dice-name h2")
+                var totalDice = currentDiceContainer.querySelector("div.total-dice-container p.display")
+                var addDiceButton = currentDiceContainer.querySelector("div.button-container button.add-button")
+                var removeDiceButton = currentDiceContainer.querySelector("div.button-container button.remove-button")
+                var diceRollResult = currentDiceContainer.querySelector("div.result-container p.display") 
+                var rollButton = currentDiceContainer.querySelector("div.button-container button.roll-button")
+
+                diceName.innerHTML = diceNames[idx]
+                
+                addDiceButton.onclick = () => {
+                    diceCounts[idx] += 1;
+                    setDisplayElementValue(totalDice, diceCounts[idx])
+                }
+
+                removeDiceButton.onclick = () => {
+                    if (diceCounts[idx] > 0) {
+                        diceCounts[idx] -= 1;
+                        setDisplayElementValue(totalDice, diceCounts[idx])
+                    }
+                }
+                rollButton.onclick = function () {
+                    var rollDice = diceRollers[idx];
+                    var result = rollDice();
+                    setDisplayElementValue(diceRollResult, result);
+                };
+
+            })
+
+        })
+
+    </script>
+}
