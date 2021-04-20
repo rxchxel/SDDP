@@ -471,7 +471,6 @@ C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign
 C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\System.Web.WebPages.dll
 C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\System.Web.WebPages.Razor.dll
 C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\WebGrease.dll
-C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\StarkbankEcdsa.dll
 C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Autofac.pdb
 C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Autofac.xml
 C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Autofac.Integration.Mvc.xml
@@ -672,3 +671,6 @@ F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Api
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.pdb
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.dll.config
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddSpellClass.resources
+C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.dll
+C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.pdb
+C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.dll.config
