@@ -1,42 +1,114 @@
-﻿@{ ViewBag.Title = "Spells";
-    Layout = "~/Views/Shared/_Layout.cshtml"; }
+﻿@*@{ ViewBag.Title = "Spells";
+        Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+    <h2>Spells</h2>
+    <table id="spells" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Spell</th>
+                <th>Casting Time</th>
+                <th>Damage Type</th>
+            </tr>
+            <tr>
+               <td>@Model</td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+
+    @*section scripts
+    {
+        <script>
+            $(document).ready(function () {
+                var table = $("#spells").DataTable({
+                    ajax: {
+                        url: "/api/spellsapi",
+                        dataSrc: ""
+                    },
+                    columns: [
+                        {
+                            data: "name",
+                        },
+                        {
+                            data: "castingTime"
+                        },
+                        {
+                            data: "level",
+                        }
+                    ]
+                });
+            });
+        </script>
+    }*@
+@*@section scripts
+    {
+        <script>
+            $(document).ready(function () {
+                var table = $("#spells").DataTable({
+                    ajax: {
+                        url: "",
+                        dataSrc: "SpellController.Index.Results"
+                    },
+                    columns: [
+                        {
+                            data: "index",
+                        },
+                        {
+                            data: "name"
+                        },
+                        {
+                            data: "url",
+                        }
+                    ]
+                });
+            });
+        </script>
+    }*@
+
+@model IEnumerable<ApiLibrary.SpellModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
 <h2>Spells</h2>
-<table id="spells" class="table table-bordered table-hover">
-    <thead>
+
+
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.index)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.url)
+            </th>*@
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>Spell</th>
-            <th>Casting Time</th>
-            <th>Damage Type</th>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.index)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.url)
+            </td>*@
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |*@
+                @Html.ActionLink("Details", "Details", new { id = item.index.ToString() })
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+            </td>
         </tr>
-    </thead>
-    <tbody>
-        
-    </tbody>
+    }
+
 </table>
-
-
-@section scripts
-{
-    <script>
-        $(document).ready(function () {
-            var table = $("#spells").DataTable({
-                ajax: {
-                    url: "/api/spellsapi",
-                    dataSrc: ""
-                },
-                columns: [
-                    {
-                        data: "name",
-                    },
-                    {
-                        data: "castingTime"
-                    },
-                    {
-                        data: "level",
-                    }
-                ]
-            });
-        });
-    </script>
-}
