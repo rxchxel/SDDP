@@ -277,9 +277,15 @@
     <Compile Include="Models\MagicItem.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Monster.cs" />
+    <Compile Include="Models\MonsterModelsApi\MonsterModel.cs" />
+    <Compile Include="Models\MonsterModelsApi\MonsterResultModel.cs" />
+    <Compile Include="Models\MonsterModelsApi\MonstersModel.cs" />
     <Compile Include="Models\ParentClass.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\Spell.cs" />
+    <Compile Include="Models\SpellModelsApi\SpellInfoModel.cs" />
+    <Compile Include="Models\SpellModelsApi\SpellModel.cs" />
+    <Compile Include="Models\SpellModelsApi\SpellResultModel.cs" />
     <Compile Include="Models\Weapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -590,6 +596,7 @@
     <Content Include="Views\CharacterSheet\Index.cshtml" />
     <Content Include="Views\CharacterSheet\New.cshtml" />
     <Content Include="Views\Spells\Details.cshtml" />
+    <Content Include="Views\Monsters\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -635,12 +642,6 @@
     <EmbeddedResource Include="Migrations\202104081704137_AddedCampaigns.resx">
       <DependentUpon>202104081704137_AddedCampaigns.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ApiLibrary\ApiLibrary.csproj">
-      <Project>{8f8506c2-3470-4d19-860b-76cb8d89b2d6}</Project>
-      <Name>ApiLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -667,9 +667,6 @@ C:\Users\matth\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign
 C:\Users\matth\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD - Campaign Dashboard v.1.csproj.CopyComplete
 C:\Users\matth\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD - Campaign Dashboard v.1.dll
 C:\Users\matth\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD - Campaign Dashboard v.1.pdb
-F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.dll
-F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.pdb
-F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.dll.config
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddSpellClass.resources
 C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.dll
 C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.pdb

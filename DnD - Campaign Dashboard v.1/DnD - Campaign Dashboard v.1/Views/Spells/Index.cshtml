@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ApiLibrary.SpellModel>
+﻿@model IEnumerable<DnD___Campaign_Dashboard_v._1.Models.SpellModelsApi.SpellModel>
 
 @{
     ViewBag.Title = "Index";
@@ -47,7 +47,7 @@
                         "data": "index",
                         render: function (data) {
                             //return "<button class='btn-link js-delete' data-customer-id=" + data + ">Details</button>";
-                            return "<a href='Details/" + data + "'>Details</a>"
+                            return "<a href='../Spells/Details/" + data + "'>Details</a>"
                         }
                     }
                 ]

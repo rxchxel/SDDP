@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Web;
-using System.Web.Http;
 using System.Web.Mvc;
-using ApiLibrary;
-using DnD___Campaign_Dashboard_v._1.Models;
+using DnD___Campaign_Dashboard_v._1.Models.SpellModelsApi;
 
 namespace DnD___Campaign_Dashboard_v._1.Controllers
 {
@@ -14,7 +9,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
     {
         private SpellInfoModel spellInfoModel;
         // GET: Spells
-        //[Authorize]
+        [Authorize]
         public ActionResult Index()
         {
 
@@ -47,7 +42,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             return View(spells.results);   
         }
 
-
+        [Authorize]
         public ActionResult Details(string id)
         {
 
