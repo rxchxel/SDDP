@@ -5,58 +5,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>@Html.DisplayFor(model => model.Name)</h2>
 
 <div>
-    <h4>MonsterModel</h4>
+    <h4>Details</h4>
     <hr />
     <dl class="dl-horizontal">
+
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Size)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.Size)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.index)
+            @Html.DisplayNameFor(model => model.Type)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.index)
+            @Html.DisplayFor(model => model.Type)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.name)
+            @Html.DisplayNameFor(model => model.Alignment)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.size)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.size)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.type)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.type)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.alignment)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.alignment)
+            @Html.DisplayFor(model => model.Alignment)
         </dd>
 
         <dt>
@@ -84,59 +61,90 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.strength)
+            @Html.DisplayNameFor(model => model.Speed)
+        </dt>
+
+        <dd></dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Speed.Walk)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.strength)
+            @Html.DisplayFor(model => model.Speed.Walk)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.dexterity)
+            @Html.DisplayNameFor(model => model.Speed.Swim)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.dexterity)
+            @Html.DisplayFor(model => model.Speed.Swim)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.constitution)
+            @Html.DisplayNameFor(model => model.Strength)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.constitution)
+            @Html.DisplayFor(model => model.Strength)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.intelligence)
+            @Html.DisplayNameFor(model => model.Dexterity)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.intelligence)
+            @Html.DisplayFor(model => model.Dexterity)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.wisdom)
+            @Html.DisplayNameFor(model => model.Constitution)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.wisdom)
+            @Html.DisplayFor(model => model.Constitution)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.charisma)
+            @Html.DisplayNameFor(model => model.Intelligence)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.charisma)
+            @Html.DisplayFor(model => model.Intelligence)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.languages)
+            @Html.DisplayNameFor(model => model.Wisdom)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.languages)
+            @Html.DisplayFor(model => model.Wisdom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Charisma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Charisma)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proficiencies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proficiencies)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Languages)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Languages)
         </dd>
 
         <dt>
@@ -148,19 +156,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.xp)
+            @Html.DisplayNameFor(model => model.Xp)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.xp)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.url)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.url)
+            @Html.DisplayFor(model => model.Xp)
         </dd>
 
     </dl>

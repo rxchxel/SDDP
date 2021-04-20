@@ -7,18 +7,16 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
 {
     public class SpellsController : Controller
     {
+        private Spells spells;
         private SpellInfoModel spellInfoModel;
         // GET: Spells
         [Authorize]
         public ActionResult Index()
         {
-
-            Spells spells = null;
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("https://www.dnd5eapi.co/api/");
-                              
-                //HTTP GET
+
                 var responseTask = client.GetAsync("spells");
                 responseTask.Wait();
 
@@ -30,9 +28,8 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
 
                     spells = readTask.Result;
                 }
-                else //web api sent error response 
-                {
-                    //log response status here..
+                else  
+                {                 
 
                     spells = new Spells();
 
@@ -51,7 +48,6 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             {
                 client.BaseAddress = new Uri("https://www.dnd5eapi.co/api/");
 
-                //HTTP GET
                 var responseTask = client.GetAsync("spells/" + id);
                 responseTask.Wait();
 
@@ -63,12 +59,8 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
 
                     spellInfoModel = readTask.Result;
                 }
-                else //web api sent error response 
-                {
-                    ////log response status here..
-
-                    //spells = new Spells();
-
+                else 
+                { 
                     ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
                 }
             }
