@@ -11,8 +11,9 @@
 <table id="spells" class="table table-bordered table-hover">
     <thead>
         <tr>
+            
             <th>Spell</th>
-            <th>Url</th>
+            <th></th>
 
         </tr>
     </thead>
@@ -38,12 +39,16 @@
                 "bAutoWidth": true,
                 "aaData": data,
                 "columns": [
+                    
                     {
                         "data": "name"
                     },
                     {
-                        "data": "url",
-
+                        "data": "index",
+                        render: function (data) {
+                            //return "<button class='btn-link js-delete' data-customer-id=" + data + ">Details</button>";
+                            return "<a href='Details/" + data + "'>Details</a>"
+                        }
                     }
                 ]
             });
