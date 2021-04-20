@@ -215,7 +215,7 @@
     <Compile Include="Controllers\DiceRollerController.cs" />
     <Compile Include="Controllers\EncounterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\MagicItemsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MonstersController.cs" />
     <Compile Include="Controllers\SpellsController.cs" />
@@ -275,6 +275,9 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ItemParentClass.cs" />
     <Compile Include="Models\MagicItem.cs" />
+    <Compile Include="Models\MagicItemModelsApi\MagicItemModel.cs" />
+    <Compile Include="Models\MagicItemModelsApi\MagicItemResultModel.cs" />
+    <Compile Include="Models\MagicItemModelsApi\MagicItemsModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Monster.cs" />
     <Compile Include="Models\MonsterModelsApi\MonsterModel.cs" />
@@ -591,11 +594,12 @@
     <Content Include="Views\Monsters\Index.cshtml" />
     <Content Include="Views\AdventuringGear\Index.cshtml" />
     <Content Include="Views\Armour\Index.cshtml" />
-    <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\MagicItems\Index.cshtml" />
     <Content Include="Views\Spells\Index.cshtml" />
     <Content Include="Views\CharacterSheet\Index.cshtml" />
     <Content Include="Views\CharacterSheet\New.cshtml" />
     <Content Include="Views\Spells\Details.cshtml" />
+    <Content Include="Views\MagicItems\Details.cshtml" />
     <Content Include="Views\Monsters\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
