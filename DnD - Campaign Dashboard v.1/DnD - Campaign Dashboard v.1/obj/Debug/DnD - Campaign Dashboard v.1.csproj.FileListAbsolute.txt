@@ -248,6 +248,7 @@ F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Deb
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddArmour.resources
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddWeaponsTable.resources
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddingMagicItemsAndAdveneturingGear.resources
+F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddSpellClass.resources
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddMonsterClass.resources
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddingEncountersAndSkills.resources
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddCharacterClass.resources
@@ -345,6 +346,7 @@ F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Sys
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\System.Web.WebPages.dll
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\System.Web.WebPages.Razor.dll
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\WebGrease.dll
+F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\StarkbankEcdsa.dll
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Autofac.pdb
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Autofac.xml
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Autofac.Integration.Mvc.xml
@@ -524,7 +526,6 @@ C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign
 C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD - Campaign Dashboard v.1.dll
 C:\Users\racha\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD - Campaign Dashboard v.1.pdb
 D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\SendGrid.dll
-D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\StarkbankEcdsa.dll
 D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\SendGrid.pdb
 D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\SendGrid.xml
 C:\Users\matth\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\DnD - Campaign Dashboard v.1.dll.config
@@ -668,7 +669,13 @@ C:\Users\matth\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign
 C:\Users\matth\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD - Campaign Dashboard v.1.csproj.CopyComplete
 C:\Users\matth\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD - Campaign Dashboard v.1.dll
 C:\Users\matth\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD - Campaign Dashboard v.1.pdb
+<<<<<<< Updated upstream
+=======
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.dll
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.pdb
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.dll.config
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddSpellClass.resources
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.dll
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.pdb
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\ApiLibrary.dll.config
+>>>>>>> Stashed changes

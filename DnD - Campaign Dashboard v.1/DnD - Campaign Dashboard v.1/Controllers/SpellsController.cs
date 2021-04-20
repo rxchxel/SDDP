@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Web;
-using System.Web.Http;
 using System.Web.Mvc;
-using ApiLibrary;
-using DnD___Campaign_Dashboard_v._1.Models;
 
 namespace DnD___Campaign_Dashboard_v._1.Controllers
 {
     public class SpellsController : Controller
     {
-        private SpellInfoModel spellInfoModel;
         // GET: Spells
-        //[Authorize]
+        [Authorize]
         public ActionResult Index()
         {
+<<<<<<< Updated upstream
+            return View();
+=======
 
             Spells spells = null;
             using (var client = new HttpClient())
@@ -54,10 +52,10 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://www.dnd5eapi.co/api/");
+                client.BaseAddress = new Uri("https://www.dnd5eapi.co");
 
                 //HTTP GET
-                var responseTask = client.GetAsync("spells/" + id);
+                var responseTask = client.GetAsync(id);
                 responseTask.Wait();
 
                 var result = responseTask.Result;
@@ -78,7 +76,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
                 }
             }
             return View(spellInfoModel);
+>>>>>>> Stashed changes
         }
-
     }
 }
