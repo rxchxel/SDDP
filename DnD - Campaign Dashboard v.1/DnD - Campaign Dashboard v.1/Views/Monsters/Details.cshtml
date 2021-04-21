@@ -142,9 +142,29 @@
             @Html.DisplayNameFor(model => model.Proficiencies)
         </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Proficiencies)
-        </dd>
+        <dd></dd>
+        @if (Model.Proficiencies != null) { 
+
+            for (int i = 0; i < Model.Proficiencies.Length; i++)
+            {
+                <dt>
+                    @Html.DisplayNameFor(model => model.Proficiencies[i].Value) @(i+1)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Proficiencies[i].Value)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Proficiencies[i].proficiency) @(i+1)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Proficiencies[i].proficiency.Name)
+                </dd>
+
+            }
+        }
 
         <dt>
             @Html.DisplayNameFor(model => model.damage_vulnerabilities)

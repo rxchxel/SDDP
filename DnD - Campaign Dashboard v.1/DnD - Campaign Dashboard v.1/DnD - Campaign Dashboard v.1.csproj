@@ -260,11 +260,9 @@
     <Compile Include="Models\AdventureGearModelsApi\AdventureGearModel.cs" />
     <Compile Include="Models\AdventureGearModelsApi\AdventureGearResultModel.cs" />
     <Compile Include="Models\AdventureGearModelsApi\AdventureGearsModel.cs" />
-    <Compile Include="Models\AdventuringGear.cs" />
     <Compile Include="Models\ArmorModelsApi\ArmorModel.cs" />
     <Compile Include="Models\ArmorModelsApi\ArmorResultModel.cs" />
     <Compile Include="Models\ArmorModelsApi\ArmorsModel.cs" />
-    <Compile Include="Models\Armour.cs" />
     <Compile Include="Models\Campaign.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Encounter.cs" />
@@ -282,7 +280,6 @@
     <Compile Include="Models\SpellModelsApi\SpellInfoModel.cs" />
     <Compile Include="Models\SpellModelsApi\SpellModel.cs" />
     <Compile Include="Models\SpellModelsApi\SpellResultModel.cs" />
-    <Compile Include="Models\Weapon.cs" />
     <Compile Include="Models\WeaponModelsApi\WeaponModel.cs" />
     <Compile Include="Models\WeaponModelsApi\WeaponResultModel.cs" />
     <Compile Include="Models\WeaponModelsApi\WeaponsModel.cs" />
