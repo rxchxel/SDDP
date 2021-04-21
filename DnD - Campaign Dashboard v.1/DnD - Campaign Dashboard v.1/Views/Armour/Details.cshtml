@@ -1,0 +1,98 @@
+﻿@model DnD___Campaign_Dashboard_v._1.Models.ArmorModelsApi.ArmorModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Html.DisplayFor(model => model.name)</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equipment_category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equipment_category.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.armor_category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.armor_category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.armor_class)
+        </dt>
+
+        <dd></dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.armor_class.Base)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.armor_class.Base)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.armor_class.dex_bonus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.armor_class.dex_bonus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.armor_class.max_bonus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.armor_class.max_bonus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.str_minimum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.str_minimum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stealth_disadvantage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stealth_disadvantage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost.Quantity) @Html.DisplayFor(model => model.Cost.Unit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

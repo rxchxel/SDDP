@@ -1,0 +1,142 @@
+﻿@model DnD___Campaign_Dashboard_v._1.Models.WeaponModelsApi.WeaponModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equipment_category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equipment_category.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.weapon_category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weapon_category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.weapon_range)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weapon_range)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category_range)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category_range)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost.Quantity) @Html.DisplayFor(model => model.Cost.Unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Damage)
+        </dt>
+
+        <dd></dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Damage.damage_dice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Damage.damage_dice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Damage.damage_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Damage.damage_type.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Range)
+        </dt>
+
+        <dd></dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Range.Normal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Range.Normal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Range._long)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Range._long)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Properties)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Properties)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.throw_range)
+        </dt>
+
+        <dd></dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.throw_range.Normal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.throw_range.Normal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.throw_range._long)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.throw_range._long)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

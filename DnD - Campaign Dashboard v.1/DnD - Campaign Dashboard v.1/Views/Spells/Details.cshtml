@@ -5,67 +5,75 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>@Html.DisplayFor(model => model.name)</h2>
 
 <div>
-    <h4>SpellInfoModel</h4>
+    <h4>Details</h4>
     <hr />
     <dl class="dl-horizontal">
-        
+
         <dt>
-            @Html.DisplayNameFor(model => model.index)
+            @Html.DisplayNameFor(model => model.desc)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.index)
+            @Html.DisplayFor(model => model.desc)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.name)
+            @Html.DisplayNameFor(model => model.higher_level)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.name)
+            @Html.DisplayFor(model => model.higher_level)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.range)
+            @Html.DisplayNameFor(model => model.Range)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.range)
+            @Html.DisplayFor(model => model.Range)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.material)
+            @Html.DisplayNameFor(model => model.Components)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.material)
+            @Html.DisplayFor(model => model.Components)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ritual)
+            @Html.DisplayNameFor(model => model.Material)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ritual)
+            @Html.DisplayFor(model => model.Material)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.duration)
+            @Html.DisplayNameFor(model => model.Ritual)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.duration)
+            @Html.DisplayFor(model => model.Ritual)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.concentration)
+            @Html.DisplayNameFor(model => model.Duration)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.concentration)
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Concentration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Concentration)
         </dd>
 
         <dt>
@@ -77,11 +85,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.level)
+            @Html.DisplayNameFor(model => model.Level)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.level)
+            @Html.DisplayFor(model => model.Level)
         </dd>
 
         <dt>
@@ -93,11 +101,105 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.url)
+            @Html.DisplayNameFor(model => model.damage.damage_type)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.url)
+            @Html.DisplayFor(model => model.damage.damage_type.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage.damage_at_slot_level)
+        </dt>
+
+        <dd></dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage.damage_at_slot_level._2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage.damage_at_slot_level._3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage.damage_at_slot_level._4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage.damage_at_slot_level._5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage.damage_at_slot_level._6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._7)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage.damage_at_slot_level._7)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._8)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage.damage_at_slot_level._8)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._9)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage.damage_at_slot_level._9)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.school)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.school.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subclasses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subclasses)
         </dd>
 
     </dl>

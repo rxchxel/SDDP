@@ -6,38 +6,46 @@
 <table id="weapons" class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>Weapons</th>
-            <th>Damage</th>
-            <th>Weapons Category</th>
+
+            <th>Weapon</th>
+            <th></th>
+
         </tr>
     </thead>
     <tbody>
-
     </tbody>
 </table>
 
-
 @section scripts
-{
-    <script>
+    {
+    <script type="text/javascript">
         $(document).ready(function () {
-            var table = $("#weapons").DataTable({
-                ajax: {
-                    url: "/api/weaponsapi",
-                    dataSrc: ""
-                },
-                columns: [
+            $.ajax({
+                url: 'https://www.dnd5eapi.co/api/equipment-categories/weapon',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    bindtoDatatable(data.equipment);
+                }
+            });
+        });
+        function bindtoDatatable(data) {
+            var table = $('#weapons').dataTable({
+                "bAutoWidth": true,
+                "aaData": data,
+                "columns": [
+
                     {
-                        data: "name",
+                        "data": "name"
                     },
                     {
-                        data: "damageType"
-                    },
-                    {
-                        data: "weaponCategory",
+                        "data": "index",
+                        render: function (data) {
+                            return "<a href='../Weapons/Details/" + data + "'>Details</a>"
+                        }
                     }
                 ]
             });
-        });
+        }
     </script>
 }
