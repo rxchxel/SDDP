@@ -194,14 +194,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\AutoFacModule.cs" />
-    <Compile Include="App_Start\MappingProfile.cs" />
     <Compile Include="Controllers\AdventuringGearController.cs" />
-    <Compile Include="Controllers\API\AdventuringGearsAPIController.cs" />
-    <Compile Include="Controllers\API\ArmoursAPIController.cs" />
-    <Compile Include="Controllers\API\MagicItemsAPIController.cs" />
-    <Compile Include="Controllers\API\MonstersAPIController.cs" />
-    <Compile Include="Controllers\API\SpellsAPIController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -209,7 +202,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\API\WeaponsAPIController.cs" />
     <Compile Include="Controllers\ArmourController.cs" />
     <Compile Include="Controllers\CharacterSheetController.cs" />
     <Compile Include="Controllers\DiceRollerController.cs" />
@@ -220,12 +212,6 @@
     <Compile Include="Controllers\MonstersController.cs" />
     <Compile Include="Controllers\SpellsController.cs" />
     <Compile Include="Controllers\WeaponsController.cs" />
-    <Compile Include="DTOs\AdventuringGearDTO.cs" />
-    <Compile Include="DTOs\ArmourDTO.cs" />
-    <Compile Include="DTOs\MagicItemDTO.cs" />
-    <Compile Include="DTOs\MonsterDTO.cs" />
-    <Compile Include="DTOs\SpellDTO.cs" />
-    <Compile Include="DTOs\WeaponDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -265,31 +251,29 @@
     <Compile Include="Migrations\202104081704137_AddedCampaigns.Designer.cs">
       <DependentUpon>202104081704137_AddedCampaigns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104211255349_DeletionMigration.cs" />
+    <Compile Include="Migrations\202104211255349_DeletionMigration.Designer.cs">
+      <DependentUpon>202104211255349_DeletionMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AdventuringGear.cs" />
-    <Compile Include="Models\Armour.cs" />
     <Compile Include="Models\Campaign.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Encounter.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ItemParentClass.cs" />
-    <Compile Include="Models\MagicItem.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemResultModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemsModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Monster.cs" />
     <Compile Include="Models\MonsterModelsApi\MonsterModel.cs" />
     <Compile Include="Models\MonsterModelsApi\MonsterResultModel.cs" />
     <Compile Include="Models\MonsterModelsApi\MonstersModel.cs" />
     <Compile Include="Models\ParentClass.cs" />
     <Compile Include="Models\Skill.cs" />
-    <Compile Include="Models\Spell.cs" />
     <Compile Include="Models\SpellModelsApi\SpellInfoModel.cs" />
     <Compile Include="Models\SpellModelsApi\SpellModel.cs" />
     <Compile Include="Models\SpellModelsApi\SpellResultModel.cs" />
-    <Compile Include="Models\Weapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -645,6 +629,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104081704137_AddedCampaigns.resx">
       <DependentUpon>202104081704137_AddedCampaigns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104211255349_DeletionMigration.resx">
+      <DependentUpon>202104211255349_DeletionMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
