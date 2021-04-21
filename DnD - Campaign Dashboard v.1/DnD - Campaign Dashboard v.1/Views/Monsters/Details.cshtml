@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Html.DisplayFor(model => model.Name)</h2>
+<h2>@Html.DisplayFor(model => model.name)</h2>
 
 <div>
     <h4>Details</h4>
@@ -26,6 +26,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subtype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subtype)
         </dd>
 
         <dt>
@@ -130,8 +138,6 @@
             @Html.DisplayFor(model => model.Charisma)
         </dd>
 
-        
-
         <dt>
             @Html.DisplayNameFor(model => model.Proficiencies)
         </dt>
@@ -139,6 +145,61 @@
         <dd>
             @Html.DisplayFor(model => model.Proficiencies)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage_vulnerabilities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage_vulnerabilities)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage_resistances)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage_resistances)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.damage_immunities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.damage_immunities)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.condition_immunities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.condition_immunities)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Senses)
+        </dt>
+
+        <dd></dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Senses.Darkvision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Senses.Darkvision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Senses.passive_perception)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Senses.passive_perception)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Languages)
         </dt>
@@ -161,6 +222,30 @@
 
         <dd>
             @Html.DisplayFor(model => model.Xp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.special_abilities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.special_abilities)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.legendary_actions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.legendary_actions)
         </dd>
 
     </dl>

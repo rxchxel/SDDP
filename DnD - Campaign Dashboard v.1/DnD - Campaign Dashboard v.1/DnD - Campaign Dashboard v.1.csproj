@@ -267,7 +267,13 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdventureGearModelsApi\AdventureGearModel.cs" />
+    <Compile Include="Models\AdventureGearModelsApi\AdventureGearResultModel.cs" />
+    <Compile Include="Models\AdventureGearModelsApi\AdventureGearsModel.cs" />
     <Compile Include="Models\AdventuringGear.cs" />
+    <Compile Include="Models\ArmorModelsApi\ArmorModel.cs" />
+    <Compile Include="Models\ArmorModelsApi\ArmorResultModel.cs" />
+    <Compile Include="Models\ArmorModelsApi\ArmorsModel.cs" />
     <Compile Include="Models\Armour.cs" />
     <Compile Include="Models\Campaign.cs" />
     <Compile Include="Models\Character.cs" />
@@ -290,6 +296,9 @@
     <Compile Include="Models\SpellModelsApi\SpellModel.cs" />
     <Compile Include="Models\SpellModelsApi\SpellResultModel.cs" />
     <Compile Include="Models\Weapon.cs" />
+    <Compile Include="Models\WeaponModelsApi\WeaponModel.cs" />
+    <Compile Include="Models\WeaponModelsApi\WeaponResultModel.cs" />
+    <Compile Include="Models\WeaponModelsApi\WeaponsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -601,6 +610,9 @@
     <Content Include="Views\Spells\Details.cshtml" />
     <Content Include="Views\MagicItems\Details.cshtml" />
     <Content Include="Views\Monsters\Details.cshtml" />
+    <Content Include="Views\Weapons\Details.cshtml" />
+    <Content Include="Views\Armour\Details.cshtml" />
+    <Content Include="Views\AdventuringGear\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
