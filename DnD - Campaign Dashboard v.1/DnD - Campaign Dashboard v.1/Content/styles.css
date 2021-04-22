@@ -26,6 +26,7 @@ body{
   background: #a40d0d;
   padding: 30px 0px;
   position: fixed;
+  z-index: 1001;
 }
 
 .wrapper .sidebar h2{
