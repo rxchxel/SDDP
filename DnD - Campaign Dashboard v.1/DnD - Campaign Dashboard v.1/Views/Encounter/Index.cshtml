@@ -1,7 +1,97 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 1em;
+            font-family: sans-serif;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+        }
+
+        h3 {
+            color: blue;
+            cursor: pointer;
+            font-size: 0.8em;
+        }
+
+        #encounter-combatant-list {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+            font-family: sans-serif;
+        }
+
+        #encounter-combatant-list-header th {
+            padding: 0.5em;
+        }
+
+        .encounter-combatant {
+            width: 100%;
+        }
+
+        #encounter-combatant-list td {
+            padding: 1em;
+            text-align: left;
+            border-top: 1px solid #8b0000;
+        }
+
+        #add-new-encounter-combatant td {
+            text-align: center;
+        }
+
+        #encounter-combatant-list .encounter-combatant-initiative,
+        #encounter-combatant-list .encounter-combatant-hp {
+            text-align: center;
+        }
+
+        #encounter-combatant-list .encounter-combatant-add,
+        #encounter-combatant-list .encounter-combatant-remove {
+            text-align: center;
+        }
+
+        button {
+            border-radius: 0.5em;
+            padding: 1em 1em;
+            font-size: 0.8em;
+            cursor: pointer;
+        }
+
+            button#add-combatant-button {
+                background-color: #FFD700;
+                border-color: #FFD700;
+            }
+
+            button#encounter-combatant-remove {
+                background-color: #DC143C; 
+                border-color: #DC143C;
+            }
+
+        input {
+            padding: 0.5em;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
 <body>
             <div class="container">
                 <h1>Encounter Initiative Tracker</h1>
