@@ -260,6 +260,14 @@
     <Compile Include="Migrations\202104221015255_ChangedDmToUserID.Designer.cs">
       <DependentUpon>202104221015255_ChangedDmToUserID.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104261059322_AddDataAnnotations.cs" />
+    <Compile Include="Migrations\202104261059322_AddDataAnnotations.Designer.cs">
+      <DependentUpon>202104261059322_AddDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104271052147_FixDungeonMasterIdDataType.cs" />
+    <Compile Include="Migrations\202104271052147_FixDungeonMasterIdDataType.Designer.cs">
+      <DependentUpon>202104271052147_FixDungeonMasterIdDataType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdventureGearModelsApi\AdventureGearModel.cs" />
@@ -269,6 +277,7 @@
     <Compile Include="Models\ArmorModelsApi\ArmorResultModel.cs" />
     <Compile Include="Models\ArmorModelsApi\ArmorsModel.cs" />
     <Compile Include="Models\Campaign.cs" />
+    <Compile Include="Models\CampaignViewModel.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Encounter.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -602,10 +611,10 @@
     <Content Include="Views\Weapons\Details.cshtml" />
     <Content Include="Views\Armour\Details.cshtml" />
     <Content Include="Views\AdventuringGear\Details.cshtml" />
+    <Content Include="Views\Campaign\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Campaign\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -653,6 +662,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104221015255_ChangedDmToUserID.resx">
       <DependentUpon>202104221015255_ChangedDmToUserID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104261059322_AddDataAnnotations.resx">
+      <DependentUpon>202104261059322_AddDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104271052147_FixDungeonMasterIdDataType.resx">
+      <DependentUpon>202104271052147_FixDungeonMasterIdDataType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
