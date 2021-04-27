@@ -9,7 +9,7 @@ namespace DnD___Campaign_Dashboard_v._1.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
             //ContextKey = "DnD___Campaign_Dashboard_v._1.Models.ApplicationDbContext";
         }
 
