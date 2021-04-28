@@ -1,103 +1,77 @@
 ﻿@model IEnumerable<DnD___Campaign_Dashboard_v._1.Models.Character>
 
 @{
-    ViewBag.Title = "Character Sheets";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Character Sheets</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "New",null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Create New", "New")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.charname)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Level)
+            @Html.DisplayNameFor(model => model.Campaign_Id)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MaxHP)
+            @Html.DisplayNameFor(model => model.classlevel)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HP)
+            @Html.DisplayNameFor(model => model.background)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TempHP)
+            @Html.DisplayNameFor(model => model.playername)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ProfBonus)
+            @Html.DisplayNameFor(model => model.race)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Inspiration)
+            @Html.DisplayNameFor(model => model.alignment)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Strength)
+            @Html.DisplayNameFor(model => model.experiencepoints)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dexterity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Constitution)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Intelligence)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Wisdom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Charisma)
-        </th>
-        <th></th>
+        <th></th>     
+        
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+            @Html.DisplayFor(modelItem => item.charname)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Level)
+            @Html.DisplayFor(modelItem => item.Campaign_Id)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MaxHP)
+            @Html.DisplayFor(modelItem => item.classlevel)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.HP)
+            @Html.DisplayFor(modelItem => item.background)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TempHP)
+            @Html.DisplayFor(modelItem => item.playername)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ProfBonus)
+            @Html.DisplayFor(modelItem => item.race)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Inspiration)
+            @Html.DisplayFor(modelItem => item.alignment)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Strength)
+            @Html.DisplayFor(modelItem => item.experiencepoints)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Dexterity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Constitution)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Intelligence)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Wisdom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Charisma)
+            @Html.DisplayFor(modelItem => item.Strengthscore)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("View", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
