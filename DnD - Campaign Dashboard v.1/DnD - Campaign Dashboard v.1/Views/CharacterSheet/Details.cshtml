@@ -1,0 +1,667 @@
+﻿@model DnD___Campaign_Dashboard_v._1.Models.Character
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Character</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.charname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.charname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Campaign_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Campaign_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classlevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classlevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.background)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.background)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.race)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.race)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.alignment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.alignment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.experiencepoints)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.experiencepoints)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Strengthscore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Strengthscore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Strengthmod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Strengthmod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dexterityscore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dexterityscore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dexteritymod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dexteritymod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Constitutionscore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Constitutionscore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Constitutionmod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Constitutionmod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wisdomscore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wisdomscore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wisdommod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wisdommod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Intelligencescore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intelligencescore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Intelligencemod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intelligencemod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Charismascore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Charismascore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Charismamod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Charismamod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inspiration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inspiration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proficiencybonus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proficiencybonus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Strength_save)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Strength_save)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dexterity_save)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dexterity_save)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Constitution_save)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Constitution_save)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wisdom_save)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wisdom_save)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Intelligence_save)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intelligence_save)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Charisma_save)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Charisma_save)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Acrobatics_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Acrobatics_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalHandling_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalHandling_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arcana_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arcana_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Athletics_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Athletics_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deception_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deception_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.History_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.History_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Insight_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Insight_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Intimidation_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intimidation_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Investigation_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Investigation_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medicine_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medicine_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nature_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nature_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Perception_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Perception_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Performance_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Performance_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Persuasion_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Persuasion_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Religion_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Religion_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SleightofHand_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SleightofHand_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stealth_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stealth_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Survival_skill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Survival_skill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.passiveperception)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.passiveperception)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.otherprofs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.otherprofs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.initiative)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.initiative)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.speed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.speed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.maxhp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maxhp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currenthp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currenthp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.temphp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.temphp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.totalhd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.totalhd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.remaininghd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.remaininghd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deathsuccess1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deathsuccess1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deathsuccess2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deathsuccess2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deathsuccess3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deathsuccess3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deathfail1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deathfail1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deathfail2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deathfail2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deathfail3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deathfail3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atkname1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atkname1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atkbonus1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atkbonus1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atkdamage1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atkdamage1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atkname2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atkname2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atkbonus2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atkbonus2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atkdamage2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atkdamage2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atkname3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atkname3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atkbonus3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atkbonus3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atkdamage3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atkdamage3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.personality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ideals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ideals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bonds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bonds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.flaws)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.flaws)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.features)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.features)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

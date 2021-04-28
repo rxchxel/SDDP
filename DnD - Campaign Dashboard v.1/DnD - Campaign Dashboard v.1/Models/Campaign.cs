@@ -15,7 +15,7 @@ namespace DnD___Campaign_Dashboard_v._1.Models
         public List<Encounter> Encounters { get; set; }
         [Required]
         [MaxLength(4)]
-        public virtual ICollection<Character> Characters { get; set; }
+        public int[] Characters { get; set; }
         [Required]
         public string DMUserId { get; set; }
     }

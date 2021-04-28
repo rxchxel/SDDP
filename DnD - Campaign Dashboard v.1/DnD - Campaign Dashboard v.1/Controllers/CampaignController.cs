@@ -23,18 +23,20 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
         {
             var campaigns = _context.Campaigns.ToList();
             return View(campaigns);
+            //return View();
         }
         [Authorize]
         public ActionResult New()
         {
             var characters = _context.Characters.ToList();
-            var viewModel = new CampaignViewModel 
+            var viewModel = new CampaignViewModel
             {
                 Characters = characters,
                 Campaign = new Campaign()
             };
 
             return View("New", viewModel);
+            //return View();
         }
         [Authorize]
         [HttpPost]
@@ -46,6 +48,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Index");
+            //return View();
         }
     }
 }

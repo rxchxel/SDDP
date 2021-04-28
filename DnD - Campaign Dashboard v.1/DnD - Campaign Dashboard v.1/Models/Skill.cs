@@ -6,13 +6,16 @@ using System.Web;
 
 namespace DnD___Campaign_Dashboard_v._1.Models
 {
-    public class Skill : ParentClass
+    public class Skill
     {
         [Required]
+        public int Id { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string Name { get; set; }
         public string AssociatedAttribute { get; set; }
-        [Required]
         public string Description { get; set; }
-        [Required]
         public int Value { get; set; }
     }
 }
