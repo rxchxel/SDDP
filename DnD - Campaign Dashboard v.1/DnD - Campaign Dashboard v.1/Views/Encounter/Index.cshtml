@@ -95,12 +95,13 @@
 <body>
             <div class="container">
                 <h1>Encounter Initiative Tracker</h1>
+                    <h2>Click a header to sort!</h2>
             </div>
             <table id="encounter-combatant-list" cellspacing="0">
                 <thead>
                     <tr id="encounter-combatant-list-titles">
                         <th>Initiative</th>
-                        <th>Name></th>
+                        <th>Name</th>
                         <th>HP</th>
                     </tr>
                 </thead>
@@ -122,3 +123,78 @@
                 </tbody>
             </table>
 </body>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            var Combatant = function (name, initiative, hp) {
+                this.name = name || "";
+                this.initiative = initiative || 0;
+                this.hp = hp || 0;
+
+                this.appendTo = function (target) {
+                    var thisObj = this;
+                    var inserted = false;
+                    var str = "";
+                    str += "<tr class='encounter-combatant' data-init='" + this.initiative + "'>";
+                    str += "<td class='encounter-combatant-initiative' contenteditable>" + this.initiative + "</td>";
+                    str += "<td class='encounter-combatant-name' contenteditable>" + this.name + "</td>";
+                    str += "<td class='encounter-combatant-hp' contenteditable>" + this.hp + "</td>";
+                    str += "<td class='encounter-combatant-remove'><button><i class='button'></i> Remove</button></td>";
+                    str += "</tr>";
+
+                    $(str).insertBefore($('#add-new-encounter-combatant'));
+                    inserted = true;
+
+                }
+            }
+
+            $('#add-combatant-button').on('click', function () {
+                //get values
+                var init = $('#add-new-encounter-combatant .encounter-combatant-initiative input').val();
+                var name = $('#add-new-encounter-combatant .encounter-combatant-name input').val();
+                var hp = $('#add-new-encounter-combatant .encounter-combatant-hp input').val();;
+
+                //create and append combatant
+                var combatant = new Combatant(name, init, hp);
+                combatant.appendTo('#encounter-combatant-list tbody');
+
+                //clear inputs
+                $('input').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+            })
+
+            $('#encounter-combatant-list').on('click', '.encounter-combatant-remove button', function () {
+                $(this).closest('.encounter-combatant').remove();
+            });
+
+            $('#encounter-combatant-list').on('blur', ".encounter-combatant .encounter-combatant-initiative", function () {
+                reinsertIntoCombatantList($(this).closest('.encounter-combatant'));
+            })
+
+            function reinsertIntoCombatantList(combatant) {
+                var init = combatant.find('.encounter-combatant-initiative').html();
+                var name = combatant.find('.encounter-combatant-name').html();
+                var hp = combatant.find('.encounter-combatant-hp').html();
+                combatant.remove();
+
+                var newCombatant = new Combatant(init, name, hp);
+                newCombatant.appendTo('encounter-combatant-list tbody');
+            }
+            //to sort the table
+            $('th').click(function () {
+                var table = $(this).parents('table').eq(0)
+                var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
+                this.asc = !this.asc
+                if (!this.asc) { rows = rows.reverse() }
+                for (var i = 0; i < rows.length; i++) { table.append(rows[i]) }
+            })
+            function comparer(index) {
+                return function (a, b) {
+                    var valA = getCellValue(a, index), valB = getCellValue(b, index)
+                    return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
+                }
+            }
+            function getCellValue(row, index) { return $(row).children('td').eq(index).text() }
+        })
+</script>
+}
