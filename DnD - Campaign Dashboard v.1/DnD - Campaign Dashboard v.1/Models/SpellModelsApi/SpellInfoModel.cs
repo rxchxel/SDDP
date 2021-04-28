@@ -9,6 +9,7 @@ namespace DnD___Campaign_Dashboard_v._1.Models.SpellModelsApi
 {
     public class SpellInfoModel : ParentClass
     {
+        [Display(Name = "Name")]
         public string name { get; set; }
 
         [Display(Name = "Description")]
@@ -30,6 +31,7 @@ namespace DnD___Campaign_Dashboard_v._1.Models.SpellModelsApi
         [Display(Name = "Attack Type")]
         public string attack_type { get; set; }
         public Damage damage { get; set; }
+        [Display(Name = "School")]
         public School school { get; set; }
         public Class[] classes { get; set; }
         public Subclass[] subclasses { get; set; }
