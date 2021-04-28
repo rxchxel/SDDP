@@ -18,11 +18,13 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             _context = new ApplicationDbContext();
         }
         // GET: Campaign
+        [Authorize]
         public ActionResult Index()
         {
             var campaigns = _context.Campaigns.ToList();
             return View(campaigns);
         }
+        [Authorize]
         public ActionResult New()
         {
             var characters = _context.Characters.ToList();
@@ -34,6 +36,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
 
             return View("New", viewModel);
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Campaign campaign)
