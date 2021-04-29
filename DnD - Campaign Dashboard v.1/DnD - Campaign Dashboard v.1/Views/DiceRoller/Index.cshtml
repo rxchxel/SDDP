@@ -82,7 +82,7 @@
         $(document).ready(function () {
 
             function percentRoll(max) {
-                return `${Math.floor(Math.random() * max)}0`
+                return Math.floor(Math.random() * max) * 10
             }
 
             function diceRoll(max) {
@@ -134,8 +134,12 @@
                 }
                 rollButton.onclick = function () {
                     var rollDice = diceRollers[idx];
-                    var result = rollDice();
-                    setDisplayElementValue(diceRollResult, result);
+                    var numberDice = diceCounts[idx];
+                    var sum = 0;
+                    for (let i = 0; i < numberDice; i++) {
+                        sum = sum + rollDice();
+                    }
+                    setDisplayElementValue(diceRollResult, sum);
                 };
 
             })
