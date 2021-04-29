@@ -59,12 +59,6 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
                                 
                 var result = responseTask.Result;
 
-                if (!result.IsSuccessStatusCode)
-                {
-                    
-                    return RedirectToAction("Details", "MagicItems", new { id });
-                }
-
                 if (result.IsSuccessStatusCode)
                 {
                     var readTask = result.Content.ReadAsAsync<ArmorModel>();
