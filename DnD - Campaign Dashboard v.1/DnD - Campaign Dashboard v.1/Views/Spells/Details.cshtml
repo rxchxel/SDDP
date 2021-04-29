@@ -70,6 +70,7 @@
                 @Html.DisplayFor(model => model.Material)
             </dd>
         }
+
         <dt>
             @Html.DisplayNameFor(model => model.Ritual)
         </dt>
@@ -77,6 +78,7 @@
         <dd>
             @Html.DisplayFor(model => model.Ritual)
         </dd>
+
 
         <dt>
             @Html.DisplayNameFor(model => model.Duration)
@@ -111,15 +113,15 @@
         </dd>
 
         @*@if (Model.higher_level != null)
-        {
-            <dt>
-                @Html.DisplayNameFor(model => model.attack_type)
-            </dt>
+            {
+                <dt>
+                    @Html.DisplayNameFor(model => model.attack_type)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.attack_type)
-            </dd>
-        }*@
+                <dd>
+                    @Html.DisplayFor(model => model.attack_type)
+                </dd>
+            }*@
 
         <dt>
             @Html.DisplayNameFor(model => model.damage.damage_type)
@@ -130,86 +132,86 @@
         </dd>
 
         @*@if (Model.higher_level != null)
-        {
-            <dt>
-                @Html.DisplayNameFor(model => model.damage.damage_at_slot_level)
-            </dt>
+            {
+                <dt>
+                    @Html.DisplayNameFor(model => model.damage.damage_at_slot_level)
+                </dt>
 
-            <dd></dd>
+                <dd></dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._2)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._2)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.damage.damage_at_slot_level._2)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.damage.damage_at_slot_level._2)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._3)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._3)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.damage.damage_at_slot_level._3)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.damage.damage_at_slot_level._3)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._4)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._4)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.damage.damage_at_slot_level._4)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.damage.damage_at_slot_level._4)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._5)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._5)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.damage.damage_at_slot_level._5)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.damage.damage_at_slot_level._5)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._6)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._6)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.damage.damage_at_slot_level._6)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.damage.damage_at_slot_level._6)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._7)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._7)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.damage.damage_at_slot_level._7)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.damage.damage_at_slot_level._7)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._8)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._8)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.damage.damage_at_slot_level._8)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.damage.damage_at_slot_level._8)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._9)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.damage.damage_at_slot_level._9)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.damage.damage_at_slot_level._9)
-            </dd>
-        }*@
-            <dt>
-                @Html.DisplayNameFor(model => model.school)
-            </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.damage.damage_at_slot_level._9)
+                </dd>
+            }*@
+        <dt>
+            @Html.DisplayNameFor(model => model.school)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.school.name)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.school.name)
+        </dd>
 
-            @*<dt>
+        @*<dt>
                 @Html.DisplayNameFor(model => model.classes)
             </dt>
 
@@ -225,9 +227,9 @@
                 @Html.DisplayFor(model => model.subclasses)
             </dd>*@
 
-        </dl>
+    </dl>
 </div>
 <p>
-    
+
     @Html.ActionLink("Back to List", "Index")
 </p>
