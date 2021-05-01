@@ -304,6 +304,10 @@
     <Compile Include="Migrations\202104281743240_UPCharProp.Designer.cs">
       <DependentUpon>202104281743240_UPCharProp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105011102229_UserIdCS.cs" />
+    <Compile Include="Migrations\202105011102229_UserIdCS.Designer.cs">
+      <DependentUpon>202105011102229_UserIdCS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdventureGearModelsApi\AdventureGearModel.cs" />
@@ -737,6 +741,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104281743240_UPCharProp.resx">
       <DependentUpon>202104281743240_UPCharProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105011102229_UserIdCS.resx">
+      <DependentUpon>202105011102229_UserIdCS.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
