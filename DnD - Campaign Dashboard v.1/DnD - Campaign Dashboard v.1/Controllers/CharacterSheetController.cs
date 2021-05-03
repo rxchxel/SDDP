@@ -38,13 +38,22 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             //return View();
         }
 
-        
+        [ValidateAntiForgeryToken]
         [HttpPost]
         public ActionResult Create(Character character)
         {
-            character.UserID = User.Identity.GetUserId();
-            _context.Characters.Add(character);
-            _context.SaveChanges();
+            try
+            {
+                character.UserID = User.Identity.GetUserId();
+                _context.Characters.Add(character);
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                ModelState.AddModelError("Error", e.Message);
+                return RedirectToAction("New","CharacterSheet");
+            }
+            
             return RedirectToAction("Index", "CharacterSheet");
             //return View();
         }
