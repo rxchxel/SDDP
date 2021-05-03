@@ -7,22 +7,27 @@ using System.Web.Mvc;
 using System.Data.Entity.Validation;
 using System.Net;
 using System.Data.Entity;
+using Microsoft.AspNet.Identity;
 
 namespace DnD___Campaign_Dashboard_v._1.Controllers
 {
+    [Authorize]
     public class CharacterSheetController : Controller
     {
         private ApplicationDbContext _context;
+        
 
         public CharacterSheetController()
         {
             _context = new ApplicationDbContext();
+            
         }
         // GET: CharacterSheet
         public ActionResult Index()
         {
+            var userId = User.Identity.GetUserId();
             var characterSheets = _context.Characters.ToList();
-            return View(characterSheets);
+            return View(characterSheets.Where(t => t.UserID == userId));
             //return View();
         }
 
@@ -37,6 +42,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
         [HttpPost]
         public ActionResult Create(Character character)
         {
+            character.UserID = User.Identity.GetUserId();
             _context.Characters.Add(character);
             _context.SaveChanges();
             return RedirectToAction("Index", "CharacterSheet");
