@@ -10,7 +10,7 @@
     @Scripts.Render("~/bundles/modernizr")
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
-<body >
+<body>
 
     <div class="wrapper">
         <div class="sidebar">
@@ -20,6 +20,7 @@
             @if (Request.IsAuthenticated)
             {
                 <ul>
+                    <li>@Html.ActionLink("Campaign", "Index", "Campaign")</li>
                     <li>@Html.ActionLink("Character Sheet", "Index", "CharacterSheet")</li>
                     <li>@Html.ActionLink("Dice Roller", "Index", "DiceRoller")</li>
                     <li>@Html.ActionLink("Encounters", "Index", "Encounter")</li>
@@ -48,8 +49,8 @@
 
 
         <div class="main_content">
-            <div class="body-content" style="padding: 20px" > @RenderBody() </div>
-            <div class="navbar-fixed-bottom" style="padding-left: 210px" >
+            <div class="body-content" style="padding: 20px"> @RenderBody() </div>
+            <div class="navbar-fixed-bottom" style="padding-left: 210px">
                 <footer>
                     <p>&copy; @DateTime.Now.Year - DND Management Systems</p>
                 </footer>

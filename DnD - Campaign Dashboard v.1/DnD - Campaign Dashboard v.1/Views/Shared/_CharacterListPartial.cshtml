@@ -1,0 +1,87 @@
+﻿@model IEnumerable<DnD___Campaign_Dashboard_v._1.Models.Character>
+
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+
+
+
+<table id="charactersPartial" class="table table-bordered table-hover" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.charname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.classlevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.background)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.playername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.race)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.alignment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.experiencepoints)
+            </th>
+            <th>Options</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.charname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.classlevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.background)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.playername)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.race)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alignment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.experiencepoints)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("View", "Details", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+@section scripts
+    {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#charactersPartial').DataTable();
+        });
+    </script>
+
+    <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
+    <script src='https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js'></script>
+
+}
+
+@*|
+    @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
