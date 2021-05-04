@@ -53,16 +53,22 @@
     </dl>
 </div>
 
-@Html.Partial("_CharacterListPartial", Model.Characters)
+@if (Model.Characters.Count != 0)
+{
+    @Html.Partial("_CharacterListPartial", Model.Characters)
+}
+else
+{
+    <div>
+        <h4>No players assigned yet!</h4>
+    </div>
+}
 
-@*@{
-    public static ApplicationDbContext _context;
-    public void Constructor()
-    {
-        _context = new ApplicationDbContext();
-    }
-    List<Character> characters = _context.Characters.ToList();
- }*@
+@Html.Partial("_Invitation", Model.Invitation)
+
+
+
+
 
 
 
