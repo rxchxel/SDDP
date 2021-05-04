@@ -308,6 +308,10 @@
     <Compile Include="Migrations\202105011102229_UserIdCS.Designer.cs">
       <DependentUpon>202105011102229_UserIdCS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105031328494_RemoveSkills.cs" />
+    <Compile Include="Migrations\202105031328494_RemoveSkills.Designer.cs">
+      <DependentUpon>202105031328494_RemoveSkills.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdventureGearModelsApi\AdventureGearModel.cs" />
@@ -321,7 +325,6 @@
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Encounter.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ItemParentClass.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemResultModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemsModel.cs" />
@@ -330,7 +333,6 @@
     <Compile Include="Models\MonsterModelsApi\MonsterResultModel.cs" />
     <Compile Include="Models\MonsterModelsApi\MonstersModel.cs" />
     <Compile Include="Models\ParentClass.cs" />
-    <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\SpellModelsApi\SpellInfoModel.cs" />
     <Compile Include="Models\SpellModelsApi\SpellModel.cs" />
     <Compile Include="Models\SpellModelsApi\SpellResultModel.cs" />
@@ -745,6 +747,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105011102229_UserIdCS.resx">
       <DependentUpon>202105011102229_UserIdCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031328494_RemoveSkills.resx">
+      <DependentUpon>202105031328494_RemoveSkills.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

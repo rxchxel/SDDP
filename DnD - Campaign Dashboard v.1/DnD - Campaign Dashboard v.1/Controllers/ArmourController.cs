@@ -13,7 +13,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
     {
         private ArmorsModel armors;
         private ArmorModel armor;
-        private MagicItemModel magicItem;
+        //private MagicItemModel magicItem;
         // GET: Armors
         [Authorize]
         public ActionResult Index()
