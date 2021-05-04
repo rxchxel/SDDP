@@ -18,11 +18,11 @@
         @Html.TextAreaFor(c => c.Campaign.Story, new { @class = "form-control" })
         @Html.ValidationMessageFor(c => c.Campaign.Story)
     </div>
-    <div class="form-group">
+    @*<div class="form-group">
         @Html.LabelFor(c => c.Campaign.Characters)
         @Html.DropDownListFor(m => m.Campaign.Characters, new SelectList(Model.Characters, "Id", "charname"), "Select Characters", new { @class = "form-control" })
         @Html.ValidationMessageFor(c => c.Campaign.Characters)
-    </div>
+    </div>*@
     @*<div class="form-group">
         @Html.LabelFor(c => c.Campaign.Characters)
         @Html.DropDownListFor(m => m.Campaign.Characters, new SelectList(Model.Characters, "Id", "Name"), "Select Characters", new { @class = "form-control" })
