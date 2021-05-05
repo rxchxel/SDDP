@@ -208,7 +208,6 @@
     <Compile Include="Controllers\DiceRollerController.cs" />
     <Compile Include="Controllers\EncounterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InvitationController.cs" />
     <Compile Include="Controllers\MagicItemsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MonstersController.cs" />
@@ -309,9 +308,9 @@
     <Compile Include="Migrations\202105011102229_UserIdCS.Designer.cs">
       <DependentUpon>202105011102229_UserIdCS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105031834568_AddDatetoCampaign.cs" />
-    <Compile Include="Migrations\202105031834568_AddDatetoCampaign.Designer.cs">
-      <DependentUpon>202105031834568_AddDatetoCampaign.cs</DependentUpon>
+    <Compile Include="Migrations\202105031328494_RemoveSkills.cs" />
+    <Compile Include="Migrations\202105031328494_RemoveSkills.Designer.cs">
+      <DependentUpon>202105031328494_RemoveSkills.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -326,8 +325,6 @@
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Encounter.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\InvitationModel.cs" />
-    <Compile Include="Models\ItemParentClass.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemResultModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemsModel.cs" />
@@ -336,7 +333,6 @@
     <Compile Include="Models\MonsterModelsApi\MonsterResultModel.cs" />
     <Compile Include="Models\MonsterModelsApi\MonstersModel.cs" />
     <Compile Include="Models\ParentClass.cs" />
-    <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\SpellModelsApi\SpellInfoModel.cs" />
     <Compile Include="Models\SpellModelsApi\SpellModel.cs" />
     <Compile Include="Models\SpellModelsApi\SpellResultModel.cs" />
@@ -620,6 +616,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -663,11 +661,6 @@
     <Content Include="Views\CharacterSheet\Edit.cshtml" />
     <Content Include="Views\CharacterSheet\Delete.cshtml" />
     <Content Include="Views\Campaign\Index.cshtml" />
-    <Content Include="Views\Shared\_CharacterListPartial.cshtml" />
-    <Content Include="Views\Campaign\View.cshtml" />
-    <Content Include="Views\Campaign\SendEmailAsync.cshtml" />
-    <Content Include="Views\Invitation\Index.cshtml" />
-    <Content Include="Views\Shared\_Invitation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -755,8 +748,8 @@
     <EmbeddedResource Include="Migrations\202105011102229_UserIdCS.resx">
       <DependentUpon>202105011102229_UserIdCS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105031834568_AddDatetoCampaign.resx">
-      <DependentUpon>202105031834568_AddDatetoCampaign.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031328494_RemoveSkills.resx">
+      <DependentUpon>202105031328494_RemoveSkills.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
