@@ -7,11 +7,12 @@
 
 <h2>Spells</h2>
 
-
+@*This defines a standard HTML table that is devoid of data. The column headers are coded in, alongside the
+    bootstrap style class*@
 <table id="spells" class="table table-bordered table-hover">
     <thead>
         <tr>
-            
+
             <th>Spell</th>
             <th></th>
 
@@ -21,10 +22,13 @@
     </tbody>
 </table>
 
+@*Here the jQuery script is kept that is used to render a DataTable with the data collected from the API.*@
 @section scripts
     {
     <script type="text/javascript">
         $(document).ready(function () {
+            @* Here an ajax call is used to fetch a list of names for each entity.Also gathered is the index, which serves as the unique
+            identifier of each entity in the API.*@
             $.ajax({
                 url: 'https://www.dnd5eapi.co/api/spells',
                 type: 'GET',
@@ -34,19 +38,21 @@
                 }
             });
         });
+        @* Function for assigning the data to the table.The colums are defined here alongside the data to be displayed in them *@
         function bindtoDatatable(data) {
             var table = $('#spells').dataTable({
                 "bAutoWidth": true,
                 "aaData": data,
                 "columns": [
-                    
+
                     {
                         "data": "name"
                     },
                     {
+                        @* Here, using the index gathered from the ajax call, it is passed back to the appropriate controller.
+            The index is then added onto the end of a URL, that is used to query the specific data of the entity *@
                         "data": "index",
                         render: function (data) {
-                            //return "<button class='btn-link js-delete' data-customer-id=" + data + ">Details</button>";
                             return "<a href='../Spells/Details/" + data + "'>Details</a>"
                         }
                     }
