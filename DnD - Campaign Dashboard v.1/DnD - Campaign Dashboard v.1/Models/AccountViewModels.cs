@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DnD___Campaign_Dashboard_v._1.Models
 {
+    //Used as a view model passed back to the view when an external third party is used to login
     public class ExternalLoginConfirmationViewModel
     {
         [Required]

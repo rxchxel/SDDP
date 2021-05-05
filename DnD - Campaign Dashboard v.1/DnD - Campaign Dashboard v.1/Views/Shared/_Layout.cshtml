@@ -11,12 +11,13 @@
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body>
-
+    @*This section creates the sidebar visible on every page, kept in the _Layout file as it is common to all pages*@
     <div class="wrapper">
         <div class="sidebar">
             <ul>
                 <li style="padding-left: 60px"><a href='@Url.Action("Index", "Home", "Landing Page")' target="_self"><img src="~/Images/Icon awesome-dice-d20.png" /></a></li>
             </ul>
+            @*Checks that the user has logged in the site before displaying the feature navigation buttons*@
             @if (Request.IsAuthenticated)
             {
                 <ul>
@@ -34,7 +35,7 @@
                 </ul>
             }
             <strong>@Html.Partial("_LoginPartial")</strong>
-
+            @*Placehold buttons for social media, upon publication of the site these would be linked to the appropriate page*@
             <div class="social_media">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -43,7 +44,7 @@
         </div>
 
 
-
+        @*Renders the bundles required for this page to function correctly*@
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)

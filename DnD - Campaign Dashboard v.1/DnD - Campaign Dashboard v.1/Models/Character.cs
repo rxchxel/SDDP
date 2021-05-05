@@ -7,6 +7,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DnD___Campaign_Dashboard_v._1.Models
 {
+    //Class contatins all of th attributes assigned to characters in dungron and dragons
+    //Will be used by users to keep track of their characters and ho they progress through the campaign
     public class Character
     {
         [Required]
