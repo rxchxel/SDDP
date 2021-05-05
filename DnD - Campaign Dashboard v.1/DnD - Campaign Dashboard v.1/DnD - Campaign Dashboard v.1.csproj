@@ -208,6 +208,7 @@
     <Compile Include="Controllers\DiceRollerController.cs" />
     <Compile Include="Controllers\EncounterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InvitationController.cs" />
     <Compile Include="Controllers\MagicItemsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MonstersController.cs" />
@@ -312,6 +313,10 @@
     <Compile Include="Migrations\202105031328494_RemoveSkills.Designer.cs">
       <DependentUpon>202105031328494_RemoveSkills.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105051831487_FixIt.cs" />
+    <Compile Include="Migrations\202105051831487_FixIt.Designer.cs">
+      <DependentUpon>202105051831487_FixIt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdventureGearModelsApi\AdventureGearModel.cs" />
@@ -325,6 +330,7 @@
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Encounter.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\InvitationModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemResultModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemsModel.cs" />
@@ -750,6 +756,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105031328494_RemoveSkills.resx">
       <DependentUpon>202105031328494_RemoveSkills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105051831487_FixIt.resx">
+      <DependentUpon>202105051831487_FixIt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
