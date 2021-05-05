@@ -674,6 +674,8 @@
     <Content Include="Views\Shared\_CharacterListPartial.cshtml" />
     <Content Include="Views\Shared\_Invitation.cshtml" />
     <Content Include="Views\Account\Info.cshtml" />
+    <Content Include="Views\Campaign\Edit.cshtml" />
+    <Content Include="Views\Campaign\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

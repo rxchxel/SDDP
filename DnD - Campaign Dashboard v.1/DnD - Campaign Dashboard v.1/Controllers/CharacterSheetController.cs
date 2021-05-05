@@ -93,7 +93,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             return View(character);
         }
 
-        // GET: /Movies/Delete/5
+        // GET: /CharacterSheet/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -108,7 +108,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             return View(character);
         }
 
-        // POST: /Movies/Delete/5
+        // POST: /CharacterSheet/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using SendGrid;
 using Microsoft.AspNet.Identity.Owin;
 using System.Threading.Tasks;
+using System.Net;
 
 namespace DnD___Campaign_Dashboard_v._1.Controllers
 {
@@ -69,7 +70,65 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             CampaignViewModel campaignViewModel = new CampaignViewModel { Campaign = campaign, Characters = characterSheets, Invitation = invitation };
             return View(campaignViewModel);
         }
-        
-        
+
+        [HttpGet]
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Campaign campaign = _context.Campaigns.Find(id);
+            if (campaign == null)
+            {
+                return HttpNotFound();
+            }
+            return View(campaign);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Campaign campaign)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Entry(campaign).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("View", new { id = campaign.Id });
+            }
+            return View(campaign);
+        }
+
+        // GET: /Campaign/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Campaign campaign = _context.Campaigns.Find(id);
+            if (campaign == null)
+            {
+                return HttpNotFound();
+            }
+            return View(campaign);
+        }
+
+        // POST: /Campaign/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Campaign campaign = _context.Campaigns.Find(id);
+            if (User.Identity.GetUserId() == campaign.DMUserId)
+            {
+                _context.Campaigns.Remove(campaign);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View("Error");
+        }
+
+
     }
 }

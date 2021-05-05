@@ -48,6 +48,10 @@
                     {
                         @Html.ActionLink("Edit", "Edit", new { id = item.Id })
                     }
+                    |@if (item.DMUserId == User.Identity.GetUserId())
+                    {
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    }
                 </td>
             </tr>
         }
