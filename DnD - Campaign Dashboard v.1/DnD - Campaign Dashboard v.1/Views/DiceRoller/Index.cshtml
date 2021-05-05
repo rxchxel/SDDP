@@ -2,6 +2,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <head>
+    @*allows for layout for individual dice*@
     <style>
         * {
             font-family: Helvetica, Arial, sans-serif;
@@ -42,29 +43,35 @@
     </style>
 </head>
 
+@*each dice will be repeated from this. *@
 <div class="dice-bag">
 
     @for (int i = 0; i < 7; i += 1) {
 
         <div class="dice-container">
 
+            @*name of dice from an array*@
             <div class="dice-name">
                 <h2></h2>
             </div>
 
+            @*how many dice are being rolled*@
             <div class="total-dice-container">
                 <p class="display">1</p>
             </div>
 
+            @*allows for adding and removing from corresponding index in the array *@
             <div class="button-container">
                 <button class="add-button">+</button>
                 <button class="remove-button">-</button>
             </div>
 
+            @*results container, will initially be blank. *@
             <div class="result-container">
                 <p class="display"> &nbsp; </p>
             </div>
 
+            @*has an onclick function that does the maths.*@
             <div class="button-container">
                 <button class="roll-button">Roll Dice</button>
             </div>
@@ -79,8 +86,9 @@
 
 @section scripts{
     <script>
+        //will not load the functions from JS until page with html has finished rendering
         $(document).ready(function () {
-
+            //actual dice roller function to do both the percentile (d100) roll and the rest of the dice. 
             function percentRoll(max) {
                 return Math.floor(Math.random() * max) * 10
             }
@@ -89,6 +97,7 @@
                 return 1 + Math.floor(Math.random() * max)
             }
 
+            //each function turned into consts to allow for storage and calling from an array
             const d4 = () => diceRoll(4);
             const d6 = () => diceRoll(6);
             const d8 = () => diceRoll(8);
@@ -103,12 +112,15 @@
 
             const diceCounts = [1, 1, 1, 1, 1, 1, 1]
 
+            //selects specific elements from the html page.
             const diceContainers = document.querySelectorAll("div.dice-container")
 
+            //setting the value once the roll or dice count has been set
             const setDisplayElementValue = (displayElement, number) => {
                 displayElement.innerHTML = number;
             }
 
+            //goes through and sets each dice roller div up with functions and results. 
             diceContainers.forEach((currentDiceContainer, idx) => {
                 console.log(currentDiceContainer)
 
@@ -119,19 +131,23 @@
                 var diceRollResult = currentDiceContainer.querySelector("div.result-container p.display") 
                 var rollButton = currentDiceContainer.querySelector("div.button-container button.roll-button")
 
+                //selects the dice name from the array
                 diceName.innerHTML = diceNames[idx]
-                
+
+                //adds value to the index position
                 addDiceButton.onclick = () => {
                     diceCounts[idx] += 1;
                     setDisplayElementValue(totalDice, diceCounts[idx])
                 }
 
+                //removes value from the correct index position
                 removeDiceButton.onclick = () => {
                     if (diceCounts[idx] > 0) {
                         diceCounts[idx] -= 1;
                         setDisplayElementValue(totalDice, diceCounts[idx])
                     }
                 }
+                //actual function to perform the dice roll
                 rollButton.onclick = function () {
                     var rollDice = diceRollers[idx];
                     var numberDice = diceCounts[idx];
@@ -139,6 +155,7 @@
                     for (let i = 0; i < numberDice; i++) {
                         sum = sum + rollDice();
                     }
+                    //applies the result to the correct area of html. 
                     setDisplayElementValue(diceRollResult, sum);
                 };
 
