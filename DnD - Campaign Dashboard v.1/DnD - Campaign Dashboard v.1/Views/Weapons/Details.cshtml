@@ -5,9 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Html.DisplayFor(model => model.Name)</h2>
+
 
 <div>
+    <h2>@Html.DisplayFor(model => model.name)</h2>
     <h4>Details</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -73,28 +74,27 @@
         <dd>
             @Html.DisplayFor(model => model.Damage.damage_type.name)
         </dd>
+        @if (Model.Range._long != null)
+        {
+            <dt>
+                Normal Range
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Range)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Range.Normal)
+            </dd>
+        }
 
-        <dd></dd>
+        @if (Model.Range._long != null)
+        {
+            <dt>
+                Long Range
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Range.Normal)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Range.Normal)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Range._long)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Range._long)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Range._long)
+            </dd>
+        }
 
         <dt>
             @Html.DisplayNameFor(model => model.Weight)
@@ -102,41 +102,11 @@
 
         <dd>
             @Html.DisplayFor(model => model.Weight)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Properties)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Properties)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.throw_range)
-        </dt>
-
-        <dd></dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.throw_range.Normal)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.throw_range.Normal)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.throw_range._long)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.throw_range._long)
-        </dd>
+        </dd>       
 
     </dl>
 </div>
 <p>
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
 </p>

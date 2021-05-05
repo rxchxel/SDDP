@@ -10,16 +10,17 @@
     @Scripts.Render("~/bundles/modernizr")
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
-<body >
+<body>
 
     <div class="wrapper">
         <div class="sidebar">
             <ul>
-                <li><a href='@Url.Action("Index", "Home", "Landing Page")' target="_self"><img src="~/Images/Icon awesome-dice-d20.png" /></a></li>
+                <li style="padding-left: 60px"><a href='@Url.Action("Index", "Home", "Landing Page")' target="_self"><img src="~/Images/Icon awesome-dice-d20.png" /></a></li>
             </ul>
             @if (Request.IsAuthenticated)
             {
                 <ul>
+                    <li>@Html.ActionLink("Campaign", "Index", "Campaign")</li>
                     <li>@Html.ActionLink("Character Sheet", "Index", "CharacterSheet")</li>
                     <li>@Html.ActionLink("Campaign", "Index", "Campaign")</li>
                     <li>@Html.ActionLink("Dice Roller", "Index", "DiceRoller")</li>
@@ -49,8 +50,8 @@
 
 
         <div class="main_content">
-            <div class="body-content" style="padding: 20px" > @RenderBody() </div>
-            <div class="navbar-fixed-bottom" style="padding-left: 210px" >
+            <div class="body-content" style="padding: 20px"> @RenderBody() </div>
+            <div class="navbar-fixed-bottom" style="padding-left: 210px">
                 <footer>
                     <p>&copy; @DateTime.Now.Year - DND Management Systems</p>
                 </footer>

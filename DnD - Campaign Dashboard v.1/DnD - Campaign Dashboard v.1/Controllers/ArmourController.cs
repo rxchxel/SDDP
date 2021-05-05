@@ -1,4 +1,5 @@
 ﻿using DnD___Campaign_Dashboard_v._1.Models.ArmorModelsApi;
+using DnD___Campaign_Dashboard_v._1.Models.MagicItemModelsApi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +13,14 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
     {
         private ArmorsModel armors;
         private ArmorModel armor;
+        private MagicItemModel magicItem;
         // GET: Armors
         [Authorize]
         public ActionResult Index()
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://www.dnd5eapi.co/api/");
+                client.BaseAddress = new Uri("https://www.dnd5eapi.co/api");
 
                 var responseTask = client.GetAsync("equipment-categories/armor");
                 responseTask.Wait();
@@ -30,6 +32,8 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
                     readTask.Wait();
 
                     armors = readTask.Result;
+
+                    
                 }
                 else
                 {
@@ -52,14 +56,20 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
 
                 var responseTask = client.GetAsync("equipment/" + id);
                 responseTask.Wait();
-
+                                
                 var result = responseTask.Result;
+
                 if (result.IsSuccessStatusCode)
                 {
                     var readTask = result.Content.ReadAsAsync<ArmorModel>();
                     readTask.Wait();
 
                     armor = readTask.Result;
+                }
+                else if (!result.IsSuccessStatusCode)
+                {
+
+                    return RedirectToAction("Details", "MagicItems", new { id });
                 }
                 else
                 {
