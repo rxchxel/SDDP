@@ -16,7 +16,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
     {
         private ApplicationDbContext _context;
         
-
+        //Instantiates a new instance of Db Context used to query the database
         public CampaignController()
         {
             _context = new ApplicationDbContext();

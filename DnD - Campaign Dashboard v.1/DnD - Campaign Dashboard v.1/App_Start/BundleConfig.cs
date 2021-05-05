@@ -5,9 +5,10 @@ namespace DnD___Campaign_Dashboard_v._1
 {
     public class BundleConfig
     {
-        // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
+        // Bundling allows you to collate commonly used files together so they can be bulk accessed
         public static void RegisterBundles(BundleCollection bundles)
         {
+            //Bundles the necessary files required for jQuery together, DataTables is included in this as it is an extension of jQuery
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/DataTables/jquery.datatables.js",
