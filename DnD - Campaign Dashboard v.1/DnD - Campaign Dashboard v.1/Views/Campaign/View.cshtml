@@ -48,6 +48,17 @@ else
         <h4>No players assigned yet!</h4>
     </div>
 }
+@Html.ActionLink("Add Encounter","NewEncounter",null, "Encounter", new { @class = "btn btn-primary" })
+@if (Model.Encounters.Count != 0)
+{
+    @Html.Partial("_EncounterListPartial", Model.Encounters)
+}
+else
+{
+    <div>
+        <h4>No encounters assigned yet!</h4>
+    </div>
+}
 
 @Html.Partial("_Invitation", Model.Invitation)
 

@@ -1,0 +1,41 @@
+﻿@model DnD___Campaign_Dashboard_v._1.Models.Encounter
+@{
+    ViewBag.Title = "New Encounter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Encounter</h2>
+
+@using (Html.BeginForm("AddEncounter", "Encounter"))         
+{
+    @Html.ValidationSummary(true, "Please fix errors ont he form!")
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Alignment)
+        @Html.TextBoxFor(m => m.Alignment, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Alignment)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Size)
+        @Html.TextBoxFor(m => m.Size, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Size)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Difficulty)
+        @Html.TextBoxFor(m => m.Difficulty, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Difficulty)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CampaignId)
+        @Html.TextBoxFor(m => m.CampaignId, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CampaignId)
+    </div>
+    @Html.HiddenFor(m => m.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Add</button>
+}
+
