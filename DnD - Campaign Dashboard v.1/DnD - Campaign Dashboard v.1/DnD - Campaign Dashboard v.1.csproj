@@ -695,17 +695,17 @@
     <Content Include="Views\Campaign\Index.cshtml" />
     <Content Include="Views\Campaign\Delete.cshtml" />
     <Content Include="Views\Campaign\Edit.cshtml" />
-    <Content Include="Views\Campaign\SendEmailAsync.cshtml" />
-    <Content Include="Views\Campaign\View.cshtml" />
-    <Content Include="Views\Shared\_CharacterListPartial.cshtml" />
-    <Content Include="Views\Shared\_Invitation.cshtml" />
-    <Content Include="Views\Campaign\Chat.cshtml" />
+    <Content Include="Views\Campaign\_CharacterListPartial.cshtml" />
+    <Content Include="Views\Campaign\_Invitation.cshtml" />
     <Content Include="Views\Campaign\_EncounterListPartial.cshtml" />
     <Content Include="Views\Campaign\NewEncounter.cshtml" />
-    <Content Include="Views\Invitation\Index.cshtml" />
+    <Content Include="Views\Campaign\Tabs.cshtml" />
+    <Content Include="Views\Campaign\_Info.cshtml" />
+    <Content Include="Views\Campaign\_Chat.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Invitation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
