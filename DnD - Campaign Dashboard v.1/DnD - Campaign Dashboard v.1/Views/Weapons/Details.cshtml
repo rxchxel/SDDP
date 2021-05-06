@@ -51,13 +51,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.Cost.Quantity) @Html.DisplayFor(model => model.Cost.Unit)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Damage)
-        </dt>
-
-        <dd></dd>
+        </dd>       
 
         <dt>
             @Html.DisplayNameFor(model => model.Damage.damage_dice)
@@ -74,27 +68,6 @@
         <dd>
             @Html.DisplayFor(model => model.Damage.damage_type.name)
         </dd>
-        @if (Model.Range._long != null)
-        {
-            <dt>
-                Normal Range
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Range.Normal)
-            </dd>
-        }
-
-        @if (Model.Range._long != null)
-        {
-            <dt>
-                Long Range
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Range._long)
-            </dd>
-        }
 
         <dt>
             @Html.DisplayNameFor(model => model.Weight)
