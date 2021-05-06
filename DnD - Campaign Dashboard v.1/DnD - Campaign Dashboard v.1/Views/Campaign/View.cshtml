@@ -1,6 +1,5 @@
 ﻿@model DnD___Campaign_Dashboard_v._1.Models.CampaignViewModel
-@using System.Data.Entity;
-@using DnD___Campaign_Dashboard_v._1.Models;
+@using Microsoft.AspNet.Identity;
 
 <div>
     <h4>@Html.DisplayFor(model => model.Campaign.Name)</h4>
@@ -27,14 +26,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Campaign.DMUserId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Campaign.DMUserId)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Campaign.DateCreated)
         </dt>
 
@@ -42,16 +33,10 @@
             @Html.DisplayFor(model => model.Campaign.DateCreated)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Campaign.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Campaign.Name)
-        </dd>
-
     </dl>
 </div>
+
+@Html.Partial("Chat")
 
 @if (Model.Characters.Count != 0)
 {
