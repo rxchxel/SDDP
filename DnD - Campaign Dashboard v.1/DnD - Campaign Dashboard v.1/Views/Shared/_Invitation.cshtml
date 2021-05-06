@@ -26,7 +26,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Invite" class="btn btn-default" />
+                <input type="submit" value="Invite" class="btn btn-default" id="invBtn"/>
+                <script>
+                    $("#invBtn").click(function () {
+                        alert("Invitation has been sent!");
+                    });
+                </script>
             </div>
         </div>
 
