@@ -711,3 +711,6 @@ D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v
 D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.UserIdCS.resources
 D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.RemoveSkills.resources
 D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.FixIt.resources
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.RemoveListEncounters.resources
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddCampaignIdToEncounters.resources
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AllowNullonCampaignID.resources

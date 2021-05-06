@@ -16,8 +16,8 @@ namespace DnD___Campaign_Dashboard_v._1.Models
         [StringLength(1000)]
         public string Note { get; set; }
         
-        //Creates a list of encounters that will serve as the fights, boss battles of the campaign
-        public List<Encounter> Encounters { get; set; }
+        ////Creates a list of encounters that will serve as the fights, boss battles of the campaign
+        //public List<Encounter> Encounters { get; set; }
         
         //Represents the dungeon master user ID, so we can check if the person viewing the campaign
         //is the one that created it and then pass the correct view

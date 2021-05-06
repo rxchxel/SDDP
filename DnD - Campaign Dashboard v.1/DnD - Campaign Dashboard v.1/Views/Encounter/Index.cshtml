@@ -158,7 +158,7 @@
                 //create and append combatant
                 var combatant = new Combatant(name, init, hp);
                 combatant.appendTo('#encounter-combatant-list tbody');
-
+                
                 //clear inputs
                 $('input').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
             })
