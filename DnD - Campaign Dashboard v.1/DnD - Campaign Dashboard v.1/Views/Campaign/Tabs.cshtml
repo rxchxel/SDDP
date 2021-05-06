@@ -1,0 +1,99 @@
+﻿@model DnD___Campaign_Dashboard_v._1.Models.CampaignViewModel
+
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<body>
+    <br />
+    <div>
+        <h4>Campaign Name: @Html.DisplayFor(model => model.Campaign.Name)</h4>
+    </div>
+
+    <!-- Tab Buttons -->
+    <ul id="tabstrip" class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#_Info" role="tab" data-toggle="tab">Info</a>
+        </li>
+        <li>
+            <a href="#_CharacterListPartial" role="tab" data-toggle="tab">Characters</a>
+        </li>
+        <li>
+            <a href="#_EncounterListPartial" role="tab" data-toggle="tab">Encounters</a>
+        </li>
+        <li>
+            <a href="#_Chat" role="tab" data-toggle="tab">Chat</a>
+        </li>
+    </ul>
+
+    <!-- Tab Content Containers -->
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="_Info">
+            <br />
+            <!-- Call partial view to load initial page load data -->
+            @Html.Partial("_Info", Model.Campaign)
+        </div>
+
+        <div class="tab-pane fade" id="_CharacterListPartial">
+            <br />
+            @if (Model.Characters.Count != 0)
+            {
+                @Html.Partial("_CharacterListPartial", Model.Characters)
+            }
+            else
+            {
+                <div>
+                    <h4>No players assigned yet! Invite your friends by using our invitation function!</h4>
+                </div>
+            }
+            <div>
+                @Html.Partial("_Invitation", Model.Invitation)
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="_EncounterListPartial">
+            <br />
+            @Html.ActionLink("Add Encounter", "NewEncounter", null, "Encounter", new { @class = "btn btn-primary" })
+
+            <h2></h2>
+
+            @if (Model.Encounters.Count != 0)
+            {
+                @Html.Partial("_EncounterListPartial", Model.Encounters)
+            }
+            else
+            {
+                <div>
+                    <h4>No encounters assigned yet!</h4>
+                </div>
+            }
+        </div>
+
+        <div class="tab-pane fade" id="_Chat">
+            <br />
+            @Html.Partial("_Chat")
+        </div>
+    </div>
+
+    <script>
+        $(document).on("ready", function () {
+            $('#tabstrip a').click(function (e) {
+                e.preventDefault()
+                var tabID = $(this).attr("href").substr(1);
+
+                $.ajax({
+                    url: "/Campaign/" + tabID,
+                    cache: false,
+                    type: "get",
+                    dataType: "html",
+                    success: function (result) {
+                        $("#" + tabID).html(result);
+                    }
+                })
+                $(this).tab('show')
+            });
+        });
+    </script>
+</body>
+</html>

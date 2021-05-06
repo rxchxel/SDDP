@@ -732,3 +732,4 @@ D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v
 D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
 D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.FixDbAgain.resources
+F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.FixDbAgain.resources

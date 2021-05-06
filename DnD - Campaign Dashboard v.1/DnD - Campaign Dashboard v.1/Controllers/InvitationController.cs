@@ -33,12 +33,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
                 _userManager = value;
             }
         }
-        // GET: Invitation
-        public ActionResult Index()
-        {
-            return View();
-        }
-
+        
         [HttpPost]
         public async Task<ActionResult> SendEmailAsync(InvitationModel invitation)
         {
@@ -55,7 +50,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
 
 
 
-            return RedirectToAction("View", "Campaign", new { id = invitation.Campaign_Id });
+            return RedirectToAction("Tabs", "Campaign", new { id = invitation.Campaign_Id });
         }
     }
 }

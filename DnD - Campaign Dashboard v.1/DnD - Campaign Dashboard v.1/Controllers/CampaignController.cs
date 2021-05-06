@@ -13,6 +13,7 @@ using System.Net;
 
 namespace DnD___Campaign_Dashboard_v._1.Controllers
 {
+    [Authorize]
     public class CampaignController : Controller
     {
         private ApplicationDbContext _context;
@@ -24,14 +25,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             
         }
 
-        [Authorize]
-        public ActionResult Chat()
-        {
-            return View();
-        }
-        
         // GET: Campaign
-        [Authorize]
         public ActionResult Index()
         {
             
@@ -40,7 +34,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             return View(campaigns.Where(t => t.DMUserId == userId));
             //return View();
         }
-        [Authorize]
+        
         public ActionResult New()
         {
             var characters = _context.Characters.ToList();
@@ -53,7 +47,8 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             return View("New", viewModel);
             //return View();
         }
-        [Authorize]
+
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Campaign campaign)
@@ -67,7 +62,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             //return View();
         }
 
-        public ActionResult View(int id)
+        public ActionResult Tabs(int id)
         {
             var encounters = _context.Encounters.Where(e => e.CampaignId == id).ToList();
             InvitationModel invitation = new InvitationModel() { Campaign_Id = id, UserId = User.Identity.GetUserId() };
@@ -121,7 +116,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
         }
 
         // POST: /Campaign/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
@@ -139,5 +134,6 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
         {
             return View();
         }
+
     }
 }
