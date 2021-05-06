@@ -10,11 +10,14 @@ namespace DnD___Campaign_Dashboard_v._1.Models
     //Will allow dungeon masters to keep track of what events occur during a given campaign
     public class Encounter : ParentClass
     {
+        [Required]
         public string Alignment { get; set; }
+        [Required]
         public int Size { get; set; }
-        public string Type { get; set; }
-        public int Rating { get; set; }
-        public int Challenge { get; set; }
-        public int? CampaignId { get; set; }
+        [StringLength(10)]
+        [Required]
+        public string Difficulty { get; set; }
+        [Required]
+        public int CampaignId { get; set; }
     }
 }

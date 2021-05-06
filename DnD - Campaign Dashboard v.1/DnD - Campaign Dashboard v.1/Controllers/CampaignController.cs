@@ -64,10 +64,11 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
 
         public ActionResult View(int id)
         {
+            var encounters = _context.Encounters.Where(e => e.CampaignId == id).ToList();
             InvitationModel invitation = new InvitationModel() { Campaign_Id = id, UserId = User.Identity.GetUserId() };
             Campaign campaign = _context.Campaigns.Find(id);
             var characterSheets = _context.Characters.Where(t => t.Campaign_Id == id).ToList();
-            CampaignViewModel campaignViewModel = new CampaignViewModel { Campaign = campaign, Characters = characterSheets, Invitation = invitation };
+            CampaignViewModel campaignViewModel = new CampaignViewModel { Campaign = campaign, Characters = characterSheets, Invitation = invitation, Encounters = encounters };
             return View(campaignViewModel);
         }
 
@@ -129,6 +130,9 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             return View("Error");
         }
 
-
+        public ActionResult NewEncounter()
+        {
+            return View();
+        }
     }
 }

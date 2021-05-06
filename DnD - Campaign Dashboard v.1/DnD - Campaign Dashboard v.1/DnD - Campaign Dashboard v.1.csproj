@@ -329,6 +329,10 @@
     <Compile Include="Migrations\202105061508080_AllowNullonCampaignID.Designer.cs">
       <DependentUpon>202105061508080_AllowNullonCampaignID.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105061544550_ChangedEncounterModelAgain.cs" />
+    <Compile Include="Migrations\202105061544550_ChangedEncounterModelAgain.Designer.cs">
+      <DependentUpon>202105061544550_ChangedEncounterModelAgain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdventureGearModelsApi\AdventureGearModel.cs" />
@@ -679,6 +683,12 @@
     <Content Include="Views\CharacterSheet\Edit.cshtml" />
     <Content Include="Views\CharacterSheet\Delete.cshtml" />
     <Content Include="Views\Campaign\Index.cshtml" />
+    <Content Include="Views\Campaign\NewEncounter.cshtml" />
+    <Content Include="Views\Campaign\View.cshtml" />
+    <Content Include="Views\Campaign\SendEmailAsync.cshtml" />
+    <Content Include="Views\Campaign\Edit.cshtml" />
+    <Content Include="Views\Campaign\Delete.cshtml" />
+    <Content Include="Views\Campaign\_EncounterListPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -780,6 +790,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105061508080_AllowNullonCampaignID.resx">
       <DependentUpon>202105061508080_AllowNullonCampaignID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105061544550_ChangedEncounterModelAgain.resx">
+      <DependentUpon>202105061544550_ChangedEncounterModelAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -20,13 +20,15 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
         {
             return View();
         }
+        
         //Adds encounters to the database
         public ActionResult AddEncounter(Encounter encounter)
         {
             _context.Encounters.Add(encounter);
             _context.SaveChanges();
+            
 
-            return View("Index");
+            return RedirectToAction("View","Campaign",new { id = encounter.CampaignId });
         }
     }
 }
