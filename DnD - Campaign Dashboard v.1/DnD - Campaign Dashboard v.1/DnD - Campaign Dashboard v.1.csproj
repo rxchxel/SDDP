@@ -679,6 +679,12 @@
     <Content Include="Views\CharacterSheet\Edit.cshtml" />
     <Content Include="Views\CharacterSheet\Delete.cshtml" />
     <Content Include="Views\Campaign\Index.cshtml" />
+    <Content Include="Views\Campaign\Delete.cshtml" />
+    <Content Include="Views\Campaign\Edit.cshtml" />
+    <Content Include="Views\Campaign\SendEmailAsync.cshtml" />
+    <Content Include="Views\Campaign\View.cshtml" />
+    <Content Include="Views\Shared\_CharacterListPartial.cshtml" />
+    <Content Include="Views\Shared\_Invitation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
