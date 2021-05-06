@@ -313,9 +313,9 @@
     <Compile Include="Migrations\202105031328494_RemoveSkills.Designer.cs">
       <DependentUpon>202105031328494_RemoveSkills.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105051824363_UpdateDB.cs" />
-    <Compile Include="Migrations\202105051824363_UpdateDB.Designer.cs">
-      <DependentUpon>202105051824363_UpdateDB.cs</DependentUpon>
+    <Compile Include="Migrations\202105051831487_FixIt.cs" />
+    <Compile Include="Migrations\202105051831487_FixIt.Designer.cs">
+      <DependentUpon>202105051831487_FixIt.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -331,7 +331,6 @@
     <Compile Include="Models\Encounter.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\InvitationModel.cs" />
-    <Compile Include="Models\ItemParentClass.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemResultModel.cs" />
     <Compile Include="Models\MagicItemModelsApi\MagicItemsModel.cs" />
@@ -668,14 +667,6 @@
     <Content Include="Views\CharacterSheet\Edit.cshtml" />
     <Content Include="Views\CharacterSheet\Delete.cshtml" />
     <Content Include="Views\Campaign\Index.cshtml" />
-    <Content Include="Views\Campaign\SendEmailAsync.cshtml" />
-    <Content Include="Views\Campaign\View.cshtml" />
-    <Content Include="Views\Invitation\Index.cshtml" />
-    <Content Include="Views\Shared\_CharacterListPartial.cshtml" />
-    <Content Include="Views\Shared\_Invitation.cshtml" />
-    <Content Include="Views\Account\Info.cshtml" />
-    <Content Include="Views\Campaign\Edit.cshtml" />
-    <Content Include="Views\Campaign\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -766,8 +757,8 @@
     <EmbeddedResource Include="Migrations\202105031328494_RemoveSkills.resx">
       <DependentUpon>202105031328494_RemoveSkills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105051824363_UpdateDB.resx">
-      <DependentUpon>202105051824363_UpdateDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105051831487_FixIt.resx">
+      <DependentUpon>202105051831487_FixIt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
