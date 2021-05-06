@@ -719,3 +719,9 @@ F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Deb
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.RemoveListEncounters.resources
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AddCampaignIdToEncounters.resources
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.AllowNullonCampaignID.resources
+F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.Core.dll
+F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.Core.pdb
+F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.Core.xml
+F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
