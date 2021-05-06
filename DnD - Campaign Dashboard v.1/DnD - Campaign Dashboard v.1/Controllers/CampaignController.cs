@@ -24,6 +24,11 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             
         }
 
+        [Authorize]
+        public ActionResult Chat()
+        {
+            return View();
+        }
         
         // GET: Campaign
         [Authorize]

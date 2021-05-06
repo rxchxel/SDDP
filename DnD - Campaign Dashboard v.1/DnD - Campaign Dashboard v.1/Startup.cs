@@ -9,6 +9,7 @@ namespace DnD___Campaign_Dashboard_v._1
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            app.MapSignalR();
         }
     }
 }

@@ -13,23 +13,24 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+            <div class="col-md-offset-0">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })                 
                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
             </div>
+            @Html.HiddenFor(m => m.Campaign_Id)
+            @Html.HiddenFor(m => m.UserId)
         </div>
 
-        @Html.HiddenFor(m => m.Campaign_Id)
-        @Html.HiddenFor(m => m.UserId)
-
-        @*@Html.ActionLink("Send Invitation Email", "SendEmailAsync", new { controller = "Invitation", id = Model.Campaign_Id, UserId = User.Identity.GetUserId() })*@
-
-        <div class="form-group">
+        <div>
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Invite" class="btn btn-default" />
+                <input type="submit" value="Invite" class="btn btn-default" id="invBtn" placeholder="Insert a valid email address.."/>
+                <script>
+                    $("#invBtn").click(function () {
+                        alert("Invitation has been sent!");
+                    });
+                </script>
             </div>
         </div>
-
     </div>
 }
 
