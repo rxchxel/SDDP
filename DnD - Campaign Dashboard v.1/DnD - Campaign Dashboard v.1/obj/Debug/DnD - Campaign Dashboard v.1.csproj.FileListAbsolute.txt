@@ -725,3 +725,10 @@ F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Mic
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.Core.xml
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
 F:\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.Core.pdb
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Documents\GitHub\SDDP\DnD - Campaign Dashboard v.1\DnD - Campaign Dashboard v.1\obj\Debug\DnD___Campaign_Dashboard_v._1.Migrations.FixDbAgain.resources

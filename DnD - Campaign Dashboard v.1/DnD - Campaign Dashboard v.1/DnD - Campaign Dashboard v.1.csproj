@@ -337,6 +337,10 @@
     <Compile Include="Migrations\202105061508080_AllowNullonCampaignID.Designer.cs">
       <DependentUpon>202105061508080_AllowNullonCampaignID.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105062045365_FixDbAgain.cs" />
+    <Compile Include="Migrations\202105062045365_FixDbAgain.Designer.cs">
+      <DependentUpon>202105062045365_FixDbAgain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdventureGearModelsApi\AdventureGearModel.cs" />
@@ -696,6 +700,9 @@
     <Content Include="Views\Shared\_CharacterListPartial.cshtml" />
     <Content Include="Views\Shared\_Invitation.cshtml" />
     <Content Include="Views\Campaign\Chat.cshtml" />
+    <Content Include="Views\Campaign\_EncounterListPartial.cshtml" />
+    <Content Include="Views\Campaign\NewEncounter.cshtml" />
+    <Content Include="Views\Invitation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -797,6 +804,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105061508080_AllowNullonCampaignID.resx">
       <DependentUpon>202105061508080_AllowNullonCampaignID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105062045365_FixDbAgain.resx">
+      <DependentUpon>202105062045365_FixDbAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
