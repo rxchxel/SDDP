@@ -688,7 +688,6 @@
     <Content Include="Views\Campaign\New.cshtml" />
     <Content Include="Views\CharacterSheet\Index.cshtml" />
     <Content Include="Views\CharacterSheet\New.cshtml" />
-    <Content Include="Views\CharacterSheet\ViewCharacter.cshtml" />
     <Content Include="Views\CharacterSheet\Details.cshtml" />
     <Content Include="Views\CharacterSheet\Edit.cshtml" />
     <Content Include="Views\CharacterSheet\Delete.cshtml" />

@@ -28,17 +28,10 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
         // GET: Campaign
         public ActionResult Index()
         {
+                       
+            var campaigns = _context.Campaigns.ToList();
             
-            //var userId = User.Identity.GetUserId();
-            var campaigns = _context.Campaigns./*Where(t => t.DMUserId == userId).*/ToList();
-            //var characters = _context.Characters.Where(t=> t.Campaign_Id != 0).ToList();
-            //CampaignViewModel campaignViewModel = new CampaignViewModel
-            //{
-            //    Campaigns = campaigns,
-            //    Characters = characters
-            //};
-            return View(campaigns);
-            //return View();
+            return View(campaigns);           
         }
         
         //Allows users to create new campaign
@@ -70,14 +63,24 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             //return View();
         }
 
-        //Replaces the INDEX action, to allow for more fluid UI
+        //Replaces the INDEX action, instead uses Tabs view to make UI more streamlined and intuitive
         public ActionResult Tabs(int id)
         {
+            //Initialises objects to be loaded into view model
             var encounters = _context.Encounters.Where(e => e.CampaignId == id).ToList();
             InvitationModel invitation = new InvitationModel() { Campaign_Id = id, UserId = User.Identity.GetUserId() };
             Campaign campaign = _context.Campaigns.Find(id);
             var characterSheets = _context.Characters.Where(t => t.Campaign_Id == id).ToList();
-            CampaignViewModel campaignViewModel = new CampaignViewModel { Campaign = campaign, Characters = characterSheets, Invitation = invitation, Encounters = encounters };
+
+            //Instrantiates new view model to pass objects to view
+            CampaignViewModel campaignViewModel = new CampaignViewModel
+            { 
+                Campaign = campaign, 
+                Characters = characterSheets, 
+                Invitation = invitation, 
+                Encounters = encounters 
+            };
+
             return View(campaignViewModel);
         }
 

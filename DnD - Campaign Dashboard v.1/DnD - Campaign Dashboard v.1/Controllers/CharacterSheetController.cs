@@ -58,14 +58,12 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             }
             
             return RedirectToAction("Index", "CharacterSheet");
-            //return View();
         }
 
         public ActionResult Details(int id)
         {
             Character character = _context.Characters.Find(id);
             return View(character);
-            //return View();
         }
 
         [HttpGet]
