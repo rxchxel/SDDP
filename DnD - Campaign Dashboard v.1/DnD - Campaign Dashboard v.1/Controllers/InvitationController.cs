@@ -34,11 +34,12 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             }
         }
         
+        //Method for sending an invitation email, users a developer's email
         [HttpPost]
         public async Task<ActionResult> SendEmailAsync(InvitationModel invitation)
         {
             
-
+            //Defines properties  of the email sent to the one being invited
             IdentityMessage email = new IdentityMessage
             {
                 Destination = invitation.Email,

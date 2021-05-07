@@ -38,16 +38,19 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             //return View();
         }
 
+        //Method for creating a new character
         [ValidateAntiForgeryToken]
         [HttpPost]
         public ActionResult Create(Character character)
         {
+            //Attempts to add to the DB
             try
             {
                 character.UserID = User.Identity.GetUserId();
                 _context.Characters.Add(character);
                 _context.SaveChanges();
             }
+            //If exception is thrown redirects to the new character page
             catch (Exception e)
             {
                 ModelState.AddModelError("Error", e.Message);
