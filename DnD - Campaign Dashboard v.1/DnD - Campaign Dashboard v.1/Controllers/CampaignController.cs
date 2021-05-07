@@ -29,9 +29,15 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
         public ActionResult Index()
         {
             
-            var userId = User.Identity.GetUserId();
-            var campaigns = _context.Campaigns.ToList();
-            return View(campaigns.Where(t => t.DMUserId == userId));
+            //var userId = User.Identity.GetUserId();
+            var campaigns = _context.Campaigns./*Where(t => t.DMUserId == userId).*/ToList();
+            //var characters = _context.Characters.Where(t=> t.Campaign_Id != 0).ToList();
+            //CampaignViewModel campaignViewModel = new CampaignViewModel
+            //{
+            //    Campaigns = campaigns,
+            //    Characters = characters
+            //};
+            return View(campaigns);
             //return View();
         }
         

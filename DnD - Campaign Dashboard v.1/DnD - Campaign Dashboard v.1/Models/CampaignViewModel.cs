@@ -11,5 +11,6 @@ namespace DnD___Campaign_Dashboard_v._1.Models
         public List<Character> Characters { get; set; }
         public List<Encounter> Encounters { get; set; }
         public Campaign Campaign { get; set; }
+        public List<Campaign> Campaigns { get; set; }
     }
 }
