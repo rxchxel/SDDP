@@ -28,7 +28,7 @@
 
         </tr>
     </thead>
-
+    
     <tbody>
         @foreach (var item in Model)
         {
@@ -43,15 +43,18 @@
                     @Html.DisplayFor(modelItem => item.DateCreated.Date)
                 </td>
                 <td>
-                    @Html.ActionLink("View", "Tabs", new { id = item.Id }) |
+                    @Html.ActionLink("View", "Tabs", new { id = item.Id })
                     @if (item.DMUserId == User.Identity.GetUserId())
                     {
+                        <span> | </span>
                         @Html.ActionLink("Edit", "Edit", new { id = item.Id })
                     }
-                    |@if (item.DMUserId == User.Identity.GetUserId())
+                    @if (item.DMUserId == User.Identity.GetUserId())
                     {
+                        <span> | </span>
                         @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                     }
+
                 </td>
             </tr>
         }
