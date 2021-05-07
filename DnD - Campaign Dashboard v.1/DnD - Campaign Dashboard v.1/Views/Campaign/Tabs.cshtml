@@ -75,13 +75,15 @@
             @Html.Partial("_Chat")
         </div>
     </div>
-
+    @Html.ActionLink("Back To List","Index")
     <script>
+        @*Jquery that render and handles tab functionality*@
         $(document).on("ready", function () {
             $('#tabstrip a').click(function (e) {
                 e.preventDefault()
                 var tabID = $(this).attr("href").substr(1);
 
+                @*Fethes data via AJAX call*@
                 $.ajax({
                     url: "/Campaign/" + tabID,
                     cache: false,

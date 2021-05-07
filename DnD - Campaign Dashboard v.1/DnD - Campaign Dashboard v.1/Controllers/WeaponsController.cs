@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace DnD___Campaign_Dashboard_v._1.Controllers
 {
+    //SEE ARMOUR CONTROLLER FOR COMMENTS DUE TO REPEATED CONTENT
     public class WeaponsController : Controller
     {
         private WeaponsModel weapons;
