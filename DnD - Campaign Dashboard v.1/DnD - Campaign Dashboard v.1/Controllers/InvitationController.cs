@@ -17,8 +17,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
         public InvitationController() { }
 
         public InvitationController(ApplicationUserManager userManager)
-        {
-            //_context = new ApplicationDbContext();
+        {           
             UserManager = userManager;
         }
 
