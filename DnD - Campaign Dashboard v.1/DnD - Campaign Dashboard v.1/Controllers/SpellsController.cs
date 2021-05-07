@@ -5,6 +5,7 @@ using DnD___Campaign_Dashboard_v._1.Models.SpellModelsApi;
 
 namespace DnD___Campaign_Dashboard_v._1.Controllers
 {
+    //SEE ARMOUR CONTROLLER FOR COMMENTS DUE TO REPEATED CONTENT
     public class SpellsController : Controller
     {
         private Spells spells;

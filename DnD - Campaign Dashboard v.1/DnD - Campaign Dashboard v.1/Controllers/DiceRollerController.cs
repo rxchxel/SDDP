@@ -8,7 +8,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
 {
     public class DiceRollerController : Controller
     {
-        // GET: DiceRoller
+        // returns view for the Jscript dicew roller
         public ActionResult Index()
         {
             return View();

@@ -41,9 +41,11 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             //return View();
         }
         
+        //Allows users to create new campaign
         public ActionResult New()
         {
             var characters = _context.Characters.ToList();
+            //Instantiates new campaign view model to pass multiple objects back to view
             var viewModel = new CampaignViewModel
             {
                 Characters = characters,
@@ -54,7 +56,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             //return View();
         }
 
-        
+        //Method used when the new campaign form is submitted
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Campaign campaign)
@@ -68,6 +70,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
             //return View();
         }
 
+        //Replaces the INDEX action, to allow for more fluid UI
         public ActionResult Tabs(int id)
         {
             var encounters = _context.Encounters.Where(e => e.CampaignId == id).ToList();
