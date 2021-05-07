@@ -13,7 +13,6 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
     {
         private ArmorsModel armors;
         private ArmorModel armor;
-        //private MagicItemModel magicItem;
         // GET: Armors
         [Authorize]
         public ActionResult Index()
@@ -86,7 +85,7 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
                 }
                 else if (!result.IsSuccessStatusCode)
                 {
-
+                    //if the result has unsuccesful status code, redirect to the magic items controller
                     return RedirectToAction("Details", "MagicItems", new { id });
                 }
                 else

@@ -58,13 +58,22 @@ namespace DnD___Campaign_Dashboard_v._1.Controllers
                 var result = responseTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
+                    //Read Async all the data and fetch only those which are relate to our model
                     var readTask = result.Content.ReadAsAsync<WeaponModel>();
+                    //Wait to fetch the data
                     readTask.Wait();
 
+                    //Store the results to the private property
                     weapon = readTask.Result;
+                }
+                else if (!result.IsSuccessStatusCode)
+                {
+                    //if the result has unsuccesful status code, redirect to the magic items controller
+                    return RedirectToAction("Details", "MagicItems", new { id });
                 }
                 else
                 {
+                    //Add an error to Model State
                     ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
                 }
             }
